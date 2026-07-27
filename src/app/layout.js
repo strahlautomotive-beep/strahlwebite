@@ -1,6 +1,5 @@
 import { Barlow, Barlow_Condensed } from "next/font/google";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import ConditionalShell from "@/components/ConditionalShell";
 import "./globals.css";
 
 const barlow = Barlow({
@@ -25,9 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${barlow.variable} ${barlowCondensed.variable}`}>
       <body>
-        <Navbar />
-        {children}
-        <Footer />
+        <ConditionalShell>{children}</ConditionalShell>
       </body>
     </html>
   );
