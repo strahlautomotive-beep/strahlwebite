@@ -20,8 +20,8 @@ export default function Home() {
       )
     },
     {
-      num: "OEM",
-      lbl: "Grade Quality",
+      num: "OE",
+      lbl: "REPLACEMENT QUALITY",
       delayClass: "delay-2",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -33,7 +33,7 @@ export default function Home() {
     },
     {
       num: "100%",
-      lbl: "Verified Parts",
+      lbl: "VERIFIED PARTS – QUALITY ASSURED",
       delayClass: "delay-3",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -43,8 +43,8 @@ export default function Home() {
       )
     },
     {
-      num: "1 Year",
-      lbl: "B2B Warranty",
+      num: "Up to",
+      lbl: "12-Month Warranty",
       delayClass: "delay-4",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -135,8 +135,8 @@ export default function Home() {
     {
       num: "01",
       color: "#60A5FA", // Light sky blue
-      title: "Wide Product Coverage",
-      body: "A growing portfolio of steering, suspension, AC and metal-rubber mounting components for leading global vehicle models.",
+      title: "Precision Engineering",
+      body: "Components engineered to deliver reliable fitment, durability, and consistent performance.",
       delay: "delay-1",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -148,8 +148,8 @@ export default function Home() {
     {
       num: "02",
       color: "#3B82F6", // Royal blue
-      title: "OEM Quality Standard",
-      body: "Components sourced strictly from qualified facilities and verified against OEM dimensions and stress specifications.",
+      title: "OE Replacement Standards",
+      body: "Manufactured to stringent OE specifications using premium-grade materials and rigorous quality control.",
       delay: "delay-2",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -161,8 +161,8 @@ export default function Home() {
     {
       num: "03",
       color: "#2563EB", // Cobalt blue
-      title: "Competitive Trade Pricing",
-      body: "Structured wholesale pricing tiers designed to deliver solid market margins for distributors and retailers.",
+      title: "Comprehensive Product Portfolio",
+      body: "A focused range of air suspension, suspension, steering, and climate control components for European vehicles.",
       delay: "delay-3",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -174,8 +174,8 @@ export default function Home() {
     {
       num: "04",
       color: "#1D4ED8", // Deep blue
-      title: "Dedicated B2B Support",
-      body: "Assigned account representatives to handle catalog queries, technical specifications, and bulk logistics.",
+      title: "Technical Expertise",
+      body: "Dedicated technical support and product guidance for distributors and professional workshops.",
       delay: "delay-4",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -187,8 +187,8 @@ export default function Home() {
     {
       num: "05",
       color: "#1E40AF", // Navy blue
-      title: "Responsive Logistics",
-      body: "Streamlined warehousing and dispatch pipelines, reducing transit delays for critical aftermarket supply.",
+      title: "Global Supply Network",
+      body: "Reliable inventory management and efficient logistics to support customers worldwide.",
       delay: "delay-1",
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -219,16 +219,15 @@ export default function Home() {
                 textShadow: "0 1px 3px rgba(0,0,0,0.4)" 
               }}
             >
-              STRAHL™ — AUTOMOTIVE AFTERMARKET SOURCING
+              STRAHL - EUROPEAN VEHICLE AFTERMARKET
             </div>
             
             <h1 className="hero-title" style={{ fontSize: "clamp(38px, 6vw, 68px)", marginBottom: "24px", color: "#ffffff" }}>
-              OEM-Grade Chassis &amp;<br />
-              Suspension Components
+              Premiun OE Replacement Parts
             </h1>
             
             <p className="hero-sub" style={{ fontSize: "19px", color: "rgba(255, 255, 255, 0.9)", maxWidth: "760px", marginBottom: "40px" }}>
-              Engineered for absolute performance and B2B reliability. Sourcing premium steering, suspension, and climate systems for distributors and fleet managers worldwide.
+              STRAHL is a trusted supplier of premium OE replacement components for European vehicles. Our suspension, steering, air suspension, and climate control solutions are engineered to deliver reliable fitment, durability, and consistent performance.
             </p>
             
             <div className="hero-btns" style={{ justifyContent: "center", marginBottom: "20px" }}>
@@ -236,7 +235,7 @@ export default function Home() {
                 Explore B2B Products
               </Link>
               <Link href="/partner" className="btn-o">
-                Become a Partner
+                Become a Distributor
               </Link>
             </div>
           </div>
@@ -260,12 +259,12 @@ export default function Home() {
           </div>
 
           {/* 3D PRODUCT PODIUM (INTEGRATED DIRECTLY INSIDE THE HERO BANNER) */}
-          <div style={{ width: "100%", marginTop: "30px", borderTop: "1px solid rgba(255, 255, 255, 0.08)", paddingTop: "20px" }}>
-            <div style={{ textAlign: "center", marginBottom: "6px" }}>
-              <span className="sec-eyebrow" style={{ color: "#38BDF8" }}>Top Sourced Parts</span>
-              <h2 className="sec-title" style={{ color: "#ffffff", background: "none", marginBottom: "6px" }}>Best Selling Components</h2>
-              <p className="sec-sub" style={{ color: "rgba(255, 255, 255, 0.8)", margin: "0 auto" }}>
-                The most widely sourced suspension, steering, and air management components across our international trade network.
+          <div style={{ width: "100%", marginTop: "20px", borderTop: "1px solid rgba(255, 255, 255, 0.08)", paddingTop: "15px" }}>
+            <div style={{ textAlign: "center", marginBottom: "10px" }}>
+              <span className="sec-eyebrow" style={{ color: "#38BDF8", marginBottom: "2px", display: "block" }}>FEATURED PRODUCTS</span>
+              <h2 className="sec-title" style={{ color: "#ffffff", WebkitTextFillColor: "#ffffff", background: "none", marginTop: "0px", marginBottom: "4px" }}>Best Selling Components</h2>
+              <p className="sec-sub" style={{ color: "rgba(255, 255, 255, 0.8)", margin: "4px auto 16px" }}>
+                A selection of our most popular OE replacement components trusted by distributors and workshops worldwide.
               </p>
             </div>
 
@@ -283,7 +282,7 @@ export default function Home() {
 
               <div 
                 className="podium-container" 
-                style={{ position: "relative", minHeight: "410px" }}
+                style={{ position: "relative", minHeight: "310px" }}
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
                 onTouchEnd={handleTouchEnd}
@@ -326,7 +325,7 @@ export default function Home() {
                       {isCenter && (
                         <div style={{ textAlign: "center", marginTop: "4px" }}>
                           <Link href="/products" style={{ fontSize: "11px", color: "var(--accent-blue)", fontWeight: "700", textDecoration: "none" }}>
-                            View Details →
+                            Learn more →
                           </Link>
                         </div>
                       )}
@@ -365,13 +364,13 @@ export default function Home() {
       {/* CORE PRODUCT GROUPS OVERVIEW */}
       <section className="sec sec-dark">
         <div className="sec-eyebrow">Product Offerings</div>
-        <h2 className="sec-title">Core Sourcing Categories</h2>
+        <h2 className="sec-title">Core Product Categories</h2>
         <p className="sec-sub">
-          We offer a structured range of core parts groupings, designed to streamline sourcing for diverse trade clients.
+          We offer a focused portfolio of premium OE replacement components for European vehicles, enabling distributors and professional workshops worldwide to source with confidence.
         </p>
         <div className="cat-grid">
           
-          {/* CATEGORY 1: SUSPENSION */}
+          {/* CATEGORY 1: AIR SUSPENSION */}
           <div className="cat-card" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
             <div>
               {/* Suspension icon is red (background: rgba(239, 68, 68, 0.08), color: #EF4444) as requested */}
@@ -382,12 +381,11 @@ export default function Home() {
                   <circle cx="12" cy="22" r="1.5" fill="currentColor" />
                 </svg>
               </div>
-              <h3 className="cat-title">Suspension &amp; Chassis Parts</h3>
+              <h3 className="cat-title">Air Suspension System</h3>
               <ul className="cat-list">
-                <li>Air Suspension Struts &amp; Bellows</li>
-                <li>Control Arms &amp; Silent Blocks</li>
-                <li>Stabilizer Links &amp; Bushings</li>
-                <li>Chassis Reinforcements</li>
+                <li>Airmatic Shock Absorbers</li>
+                <li>Airmatic Compressors</li>
+                <li>Airmatic Valve Blocks</li>
               </ul>
             </div>
             
@@ -396,21 +394,21 @@ export default function Home() {
               <div className="cat-thumbs">
                 <Link href="/products" className="cat-thumb">
                   <div className="cat-thumb-img">
-                    <Image src="/images/product_4.jpg" alt="Control Arm" fill style={{ objectFit: "cover" }} />
+                    <Image src="/images/product_1.jpg" alt="Airmatic Shock Absorber" fill style={{ objectFit: "cover" }} />
                   </div>
-                  <span className="cat-thumb-name">Control Arm</span>
+                  <span className="cat-thumb-name">Shock Absorber</span>
                 </Link>
                 <Link href="/products" className="cat-thumb">
                   <div className="cat-thumb-img">
-                    <Image src="/images/product_1.jpg" alt="Suspension Strut" fill style={{ objectFit: "cover" }} />
+                    <Image src="/images/product_2.jpg" alt="Airmatic Compressor" fill style={{ objectFit: "cover" }} />
                   </div>
-                  <span className="cat-thumb-name">Suspension Strut</span>
+                  <span className="cat-thumb-name">Compressor</span>
                 </Link>
               </div>
             </div>
           </div>
 
-          {/* CATEGORY 2: ENGINE MOUNTS */}
+          {/* CATEGORY 2: SUSPENSION COMPONENTS */}
           <div className="cat-card" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
             <div>
               <div className="cat-ico" style={{ width: "64px", height: "64px", borderRadius: "50%", background: "rgba(56, 189, 248, 0.08)", display: "flex", alignItems: "center", justifyContent: "center", color: "#38BDF8", marginBottom: "20px" }}>
@@ -420,12 +418,11 @@ export default function Home() {
                   <path d="M12 7v10M7 12h10" strokeWidth="2.2" />
                 </svg>
               </div>
-              <h3 className="cat-title">Engine Mounting Systems</h3>
+              <h3 className="cat-title">Suspension Components</h3>
               <ul className="cat-list">
-                <li>Engine Mount Assemblies</li>
-                <li>Transmission Support Mounts</li>
-                <li>Hydraulic &amp; Rubber Dampers</li>
-                <li>Torque Restrictors</li>
+                <li>Lower Arms</li>
+                <li>Upper Arms</li>
+                <li>Stabilizer Links</li>
               </ul>
             </div>
 
@@ -434,21 +431,21 @@ export default function Home() {
               <div className="cat-thumbs">
                 <Link href="/products" className="cat-thumb">
                   <div className="cat-thumb-img">
-                    <Image src="/images/product_12.png" alt="Engine Mount" fill style={{ objectFit: "cover" }} />
+                    <Image src="/images/product_5.jpg" alt="Lower Arm" fill style={{ objectFit: "cover" }} />
                   </div>
-                  <span className="cat-thumb-name">Engine Mount</span>
+                  <span className="cat-thumb-name">Lower Arm</span>
                 </Link>
                 <Link href="/products" className="cat-thumb">
                   <div className="cat-thumb-img">
-                    <Image src="/images/product_13.png" alt="Transmission Mount" fill style={{ objectFit: "cover" }} />
+                    <Image src="/images/product_4.jpg" alt="Upper Arm" fill style={{ objectFit: "cover" }} />
                   </div>
-                  <span className="cat-thumb-name">Transmission Mount</span>
+                  <span className="cat-thumb-name">Upper Arm</span>
                 </Link>
               </div>
             </div>
           </div>
 
-          {/* CATEGORY 3: STEERING */}
+          {/* CATEGORY 3: STEERING COMPONENTS */}
           <div className="cat-card" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
             <div>
               <div className="cat-ico" style={{ width: "64px", height: "64px", borderRadius: "50%", background: "rgba(56, 189, 248, 0.08)", display: "flex", alignItems: "center", justifyContent: "center", color: "#38BDF8", marginBottom: "20px" }}>
@@ -458,12 +455,10 @@ export default function Home() {
                   <path d="M12 7v10" />
                 </svg>
               </div>
-              <h3 className="cat-title">Steering Gear &amp; Linkages</h3>
+              <h3 className="cat-title">Steering Components</h3>
               <ul className="cat-list">
-                <li>Tie Rod Ends &amp; Axial Joints</li>
-                <li>Steering Rack Shafts &amp; Bushings</li>
-                <li>Ball Joints &amp; Swivel Bearings</li>
-                <li>Column Shaft Couplers</li>
+                <li>Tie Rod Ends</li>
+                <li>Steering Ball Joints</li>
               </ul>
             </div>
 
@@ -478,15 +473,15 @@ export default function Home() {
                 </Link>
                 <Link href="/products" className="cat-thumb">
                   <div className="cat-thumb-img">
-                    <Image src="/images/product_14.png" alt="Steering Rack" fill style={{ objectFit: "cover" }} />
+                    <Image src="/images/product_14.png" alt="Steering Ball Joint" fill style={{ objectFit: "cover" }} />
                   </div>
-                  <span className="cat-thumb-name">Steering Rack</span>
+                  <span className="cat-thumb-name">Ball Joint</span>
                 </Link>
               </div>
             </div>
           </div>
 
-          {/* CATEGORY 4: CLIMATE CONTROL */}
+          {/* CATEGORY 4: CLIMATE CONTROL COMPONENTS */}
           <div className="cat-card" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
             <div>
               <div className="cat-ico" style={{ width: "64px", height: "64px", borderRadius: "50%", background: "rgba(56, 189, 248, 0.08)", display: "flex", alignItems: "center", justifyContent: "center", color: "#38BDF8", marginBottom: "20px" }}>
@@ -496,12 +491,12 @@ export default function Home() {
                   <path d="M12 3v18M3 12h18M6 6l12 12M6 18L18 6" strokeWidth="2" />
                 </svg>
               </div>
-              <h3 className="cat-title">Climate Control Parts</h3>
+              <h3 className="cat-title">Climate Control Components</h3>
               <ul className="cat-list">
-                <li>AC Compressors (Variable/Fixed)</li>
-                <li>Condensers with Receiver Driers</li>
-                <li>Cooling Coils &amp; Evaporators</li>
-                <li>Expansion Valves &amp; Switches</li>
+                <li>AC Compressors</li>
+                <li>AC Condensers</li>
+                <li>Evaporators / Cooling Coils</li>
+                <li>Expansion Valves</li>
               </ul>
             </div>
 
@@ -533,7 +528,7 @@ export default function Home() {
           <span className="sec-eyebrow">The STRAHL Advantage</span>
           <h2 className="sec-title">Engineered to Outperform</h2>
           <p className="sec-sub" style={{ margin: "0 auto" }}>
-            Five reasons wholesale distributors and automotive professionals trust STRAHL for their supply chain.
+            Five reasons distributors and professional workshops choose STRAHL as their trusted OE replacement partner.
           </p>
         </div>
 
@@ -562,48 +557,75 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ENHANCED CTA SECTION */}
+      {/* ENHANCED NEON GRADIENT CTA SECTION */}
       <section className="sec" style={{ paddingBottom: "20px" }}>
         <div 
           style={{ 
-            background: "linear-gradient(135deg, #0B1128 0%, #111A3E 100%)", 
-            border: "1px solid rgba(37, 99, 235, 0.22)", 
+            position: "relative",
+            background: "linear-gradient(135deg, #091128 0%, #152244 45%, #1D3557 75%, #0B132B 100%) padding-box, linear-gradient(135deg, #38BDF8 0%, #3B82F6 50%, #10B981 100%) border-box", 
+            border: "2px solid transparent", 
             borderRadius: "28px", 
             padding: "60px 40px",
-            boxShadow: "0 20px 50px rgba(11, 17, 40, 0.25)",
+            boxShadow: "0 20px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(56, 189, 248, 0.15)",
             textAlign: "center",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: "24px"
+            gap: "20px",
+            overflow: "hidden"
           }}
         >
-          <span className="sec-eyebrow" style={{ color: "#38BDF8", letterSpacing: "3px" }}>Commercial desk</span>
-          <h2 style={{ fontSize: "clamp(26px, 4vw, 36px)", color: "#fff", fontWeight: "700", fontFamily: "var(--fd)" }}>
-            Establish Your Automotive Supply Chain
+          <span className="sec-eyebrow" style={{ color: "#38BDF8", letterSpacing: "3px", textShadow: "0 0 12px rgba(56, 189, 248, 0.6)", fontWeight: "700" }}>
+            BUSINESS ENQUIRIES
+          </span>
+
+          <h2 style={{ fontSize: "clamp(26px, 4vw, 38px)", color: "#fff", fontWeight: "700", fontFamily: "var(--fd)", textShadow: "0 2px 10px rgba(0,0,0,0.5)" }}>
+            Grow Your Automotive Aftermarket Business
           </h2>
-          <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "15.5px", maxWidth: "680px", margin: "0 auto", fontWeight: "300", lineHeight: "1.7" }}>
-            Partner with STRAHL™ to consolidate your product lines, access custom contract volume rates, and leverage catalog indexing to fulfill customer demands.
+
+          <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "15.5px", maxWidth: "680px", margin: "0 auto", fontWeight: "300", lineHeight: "1.7" }}>
+            Partner with STRAHL™ to access a comprehensive range of premium OE replacement components, competitive distributor pricing, and dedicated technical support for European vehicles.
           </p>
 
           {/* Visual trust highlights inside CTA */}
-          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "24px", margin: "10px 0" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13.5px", color: "#38BDF8", fontWeight: "600" }}>
-              <span style={{ color: "#10B981" }}>✓</span> Instant Digital Catalog Access
+          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "16px", margin: "6px 0" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13.5px", color: "#ffffff", fontWeight: "600", background: "rgba(56, 189, 248, 0.08)", border: "1px solid rgba(56, 189, 248, 0.25)", borderRadius: "30px", padding: "6px 18px", boxShadow: "0 0 15px rgba(56, 189, 248, 0.1)" }}>
+              <span style={{ color: "#10B981", textShadow: "0 0 8px rgba(16, 185, 129, 0.8)", fontWeight: "800" }}>✓</span> Digital Product Catalogue
             </div>
-            <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13.5px", color: "#38BDF8", fontWeight: "600" }}>
-              <span style={{ color: "#10B981" }}>✓</span> High-Margin Distributor Tiers
+            <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13.5px", color: "#ffffff", fontWeight: "600", background: "rgba(56, 189, 248, 0.08)", border: "1px solid rgba(56, 189, 248, 0.25)", borderRadius: "30px", padding: "6px 18px", boxShadow: "0 0 15px rgba(56, 189, 248, 0.1)" }}>
+              <span style={{ color: "#10B981", textShadow: "0 0 8px rgba(16, 185, 129, 0.8)", fontWeight: "800" }}>✓</span> Technical Support
             </div>
-            <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13.5px", color: "#38BDF8", fontWeight: "600" }}>
-              <span style={{ color: "#10B981" }}>✓</span> 1-Year Core Replacement Warranty
+            <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13.5px", color: "#ffffff", fontWeight: "600", background: "rgba(56, 189, 248, 0.08)", border: "1px solid rgba(56, 189, 248, 0.25)", borderRadius: "30px", padding: "6px 18px", boxShadow: "0 0 15px rgba(56, 189, 248, 0.1)" }}>
+              <span style={{ color: "#10B981", textShadow: "0 0 8px rgba(16, 185, 129, 0.8)", fontWeight: "800" }}>✓</span> Up to 12-Month Warranty
             </div>
           </div>
 
-          <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", justifyContent: "center", marginTop: "10px" }}>
-            <Link href="/contact" className="btn-p">
+          <p style={{ fontSize: "14.5px", color: "#38BDF8", fontWeight: "600", margin: "2px 0 0 0", textShadow: "0 0 10px rgba(56, 189, 248, 0.4)" }}>
+            Trusted partner for premium OE replacement components.
+          </p>
+
+          <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", justifyContent: "center", marginTop: "8px" }}>
+            <Link 
+              href="/contact" 
+              className="btn-p"
+              style={{
+                background: "linear-gradient(135deg, #38BDF8 0%, #2563EB 100%)",
+                boxShadow: "0 0 25px rgba(56, 189, 248, 0.4), 0 4px 15px rgba(37, 99, 235, 0.4)",
+                border: "none",
+                fontWeight: "700"
+              }}
+            >
               Request B2B Quote
             </Link>
-            <Link href="/partner" className="btn-o" style={{ borderColor: "rgba(255,255,255,0.2)" }}>
+            <Link 
+              href="/partner" 
+              className="btn-o" 
+              style={{ 
+                borderColor: "#38BDF8",
+                color: "#ffffff",
+                boxShadow: "0 0 15px rgba(56, 189, 248, 0.2)"
+              }}
+            >
               Become a Distributor
             </Link>
           </div>

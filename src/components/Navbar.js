@@ -24,14 +24,13 @@ export default function Navbar() {
       <nav className="navbar-floating">
         <Link href="/" className="nav-logo">
           <Image
-            src="/images/logo.jpg"
+            src="/images/strahl-logo-final.png"
             alt="STRAHL Logo"
-            width={120}
-            height={32}
+            width={200}
+            height={60}
             priority
-            style={{ height: "32px", width: "auto", objectFit: "contain" }}
+            style={{ height: "58px", width: "auto", objectFit: "contain" }}
           />
-          <span className="nav-logo-text">STRAHL</span>
         </Link>
 
         <ul className="nav-links">
