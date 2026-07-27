@@ -4,7 +4,21 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import { initialContent } from "@/data/initialContent";
+
 export default function Home() {
+  const [homeContent, setHomeContent] = useState(initialContent.home);
+
+  useEffect(() => {
+    fetch("/api/content")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data && data.home) {
+          setHomeContent(data.home);
+        }
+      })
+      .catch((err) => console.log("Using initial home content fallback:", err));
+  }, []);
   const miniCards = [
     {
       num: "5+",

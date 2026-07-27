@@ -500,15 +500,29 @@ function ProductDetailModal({ product, onClose }) {
   );
 }
 
+import { initialContent } from "@/data/initialContent";
+
 export default function ProductsPage() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [productsList, setProductsList] = useState(initialContent.products);
 
-  const categories = ["All", "Air Suspension", "Suspension", "Engine Mounts", "Steering", "AC System"];
+  useEffect(() => {
+    fetch("/api/content")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data && Array.isArray(data.products) && data.products.length > 0) {
+          setProductsList(data.products);
+        }
+      })
+      .catch((err) => console.log("Using initial products fallback:", err));
+  }, []);
+
+  const categories = ["All", "Air Suspension System", "Air Suspension", "Suspension Components", "Suspension", "Steering Components", "Steering", "Climate Control Components", "AC System", "Engine Mounts"];
 
   const filteredProducts = activeCategory === "All"
-    ? PRODUCTS_DATA
-    : PRODUCTS_DATA.filter((p) => p.cat === activeCategory);
+    ? productsList
+    : productsList.filter((p) => p.cat === activeCategory || p.cat.toLowerCase().includes(activeCategory.toLowerCase()));
 
   return (
     <main className="sec">

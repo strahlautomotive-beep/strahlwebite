@@ -1,63 +1,22 @@
-import Link from "next/link";
+"use client";
 
-export const metadata = {
-  title: "Partner with STRAHL™ — B2B Distribution & Sourcing Channels",
-  description: "Become a partner. Read about partnership benefits, authorized distributor tiers, and the 4-step B2B onboarding process.",
-};
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { initialContent } from "@/data/initialContent";
 
 export default function PartnerPage() {
-  const tiers = [
-    {
-      title: "Authorized Distributor",
-      benefits: [
-        "Exclusive territorial distribution rights for specific chassis or AC lines.",
-        "Highest tier trade discount structures and wholesale margins.",
-        "Direct listing on official STRAHL dealer index lists.",
-        "Dedicated supply queue priority on new stock allocations."
-      ]
-    },
-    {
-      title: "Retail Partner",
-      benefits: [
-        "No heavy capital constraints — lower minimum order quantities (MOQs).",
-        "Point-of-Sale (POS) marketing kits, brochures, and brand catalogs.",
-        "Quick dispatch access on popular steering and suspension part numbers.",
-        "Simple digital parts indexing for rapid vehicle model matching."
-      ]
-    },
-    {
-      title: "Fleet & Service Operators",
-      benefits: [
-        "Fixed contract pricing on high-wear parts (control arms, struts).",
-        "Direct warranty verification and swift core exchange process.",
-        "Dedicated catalog compatibility checks based on fleet vehicle VIN lists.",
-        "Consolidated monthly shipping allocations directly to service bays."
-      ]
-    }
-  ];
+  const [content, setContent] = useState(initialContent.partner);
 
-  const onboardingSteps = [
-    {
-      step: "01",
-      title: "Submit Application",
-      desc: "Fill out the wholesale enquiry on our contact page, including your business GST/registration details and desired product segments."
-    },
-    {
-      step: "02",
-      title: "Regional Evaluation",
-      desc: "Our sales desk reviews applicant credentials and regional coverage within 48 hours to avoid channel conflict with existing partners."
-    },
-    {
-      step: "03",
-      title: "Terms Alignment",
-      desc: "Align on target minimum order quantities (MOQs), shipping terms, payment schedules, and distributor discount brackets."
-    },
-    {
-      step: "04",
-      title: "Portal Onboarding",
-      desc: "Receive dealer login access, product specification catalogs, marketing resources, and schedule your first batch dispatch."
-    }
-  ];
+  useEffect(() => {
+    fetch("/api/content")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data && data.partner) {
+          setContent(data.partner);
+        }
+      })
+      .catch((err) => console.log("Using initial partner fallback:", err));
+  }, []);
 
   return (
     <main className="sec" style={{ position: "relative" }}>
@@ -71,10 +30,10 @@ export default function PartnerPage() {
 
       {/* HEADER */}
       <div style={{ textAlign: "center", marginBottom: "60px" }}>
-        <span className="sec-eyebrow">Work with us</span>
-        <h1 className="sec-title">B2B Partnership &amp; Channels</h1>
+        <span className="sec-eyebrow">{content.header.eyebrow}</span>
+        <h1 className="sec-title">{content.header.title}</h1>
         <p className="sec-sub" style={{ margin: "0 auto", color: "#000000", fontWeight: "400" }}>
-          We welcome collaborations built on quality, transparency, and joint market growth. Join our expanding auto-parts supply chain.
+          {content.header.desc}
         </p>
       </div>
 
@@ -110,9 +69,16 @@ export default function PartnerPage() {
         </p>
 
         <div className="partner-tiers">
-          {tiers.map((tier) => (
-            <div key={tier.title} className="tier-card">
-              <h3 className="tier-title">{tier.title}</h3>
+          {content.tiers.map((tier) => (
+            <div key={tier.tier} className="tier-card">
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
+                <h3 className="tier-title" style={{ margin: 0 }}>{tier.tier}</h3>
+                {tier.tag && (
+                  <span style={{ fontSize: "11px", fontWeight: "700", textTransform: "uppercase", padding: "4px 10px", borderRadius: "12px", background: "rgba(56, 189, 248, 0.12)", color: tier.tagColor || "#38BDF8", border: `1px solid ${tier.tagColor || "#38BDF8"}` }}>
+                    {tier.tag}
+                  </span>
+                )}
+              </div>
               <ul className="tier-benefits">
                 {tier.benefits.map((benefit, idx) => (
                   <li key={idx}>
@@ -136,7 +102,7 @@ export default function PartnerPage() {
         </p>
 
         <div className="partner-onboarding-grid">
-          {onboardingSteps.map((step) => (
+          {content.onboardingSteps.map((step) => (
             <div key={step.step} className="testing-card">
               <span className="testing-badge">Step {step.step}</span>
               <h3 className="testing-title" style={{ marginTop: "10px" }}>{step.title}</h3>

@@ -29,9 +29,17 @@ function ContactFormInner() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Simulate submission
+    try {
+      await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+      });
+    } catch (err) {
+      console.error("Error submitting inquiry:", err);
+    }
     setSubmitted(true);
   };
 
