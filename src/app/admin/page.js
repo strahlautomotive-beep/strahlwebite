@@ -5,6 +5,22 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function AdminPage() {
+  // ─── AUTH STATE ───────────────────────────────────────────────
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [loginId, setLoginId] = useState("");
+  const [loginPass, setLoginPass] = useState("");
+  const [showLoginPass, setShowLoginPass] = useState(false);
+  const [loginError, setLoginError] = useState("");
+  const [credentials, setCredentials] = useState({ id: "1", password: "1" });
+
+  // ─── SETTINGS STATE ───────────────────────────────────────────
+  const [showSettings, setShowSettings] = useState(false);
+  const [newId, setNewId] = useState("");
+  const [newPass, setNewPass] = useState("");
+  const [showNewPass, setShowNewPass] = useState(false);
+  const [settingsSaved, setSettingsSaved] = useState(false);
+
+  // ─── ADMIN CMS STATE ──────────────────────────────────────────
   const [activeTab, setActiveTab] = useState("home");
   const [content, setContent] = useState(null);
   const [leads, setLeads] = useState([]);
@@ -14,10 +30,162 @@ export default function AdminPage() {
   const [leadFilter, setLeadFilter] = useState("all");
   const [leadSearch, setLeadSearch] = useState("");
 
-  // FETCH CONTENT AND LEADS ON MOUNT
+  // FETCH CONTENT AND LEADS ON MOUNT (only after login)
   useEffect(() => {
-    fetchData();
-  }, []);
+    if (isLoggedIn) fetchData();
+  }, [isLoggedIn]);
+
+  // ─── LOGIN HANDLER ────────────────────────────────────────────
+  const handleLogin = (e) => {
+    e.preventDefault();
+    if (loginId === credentials.id && loginPass === credentials.password) {
+      setIsLoggedIn(true);
+      setLoginError("");
+    } else {
+      setLoginError("Invalid credentials. Please try again.");
+    }
+  };
+
+  // ─── SETTINGS SAVE HANDLER ───────────────────────────────────
+  const handleSaveSettings = () => {
+    if (!newId.trim() || !newPass.trim()) return;
+    setCredentials({ id: newId.trim(), password: newPass.trim() });
+    setSettingsSaved(true);
+    setTimeout(() => {
+      setSettingsSaved(false);
+      setShowSettings(false);
+      setNewId("");
+      setNewPass("");
+    }, 1500);
+  };
+
+  // ─── LOGIN PAGE ───────────────────────────────────────────────
+  if (!isLoggedIn) {
+    return (
+      <div style={{
+        minHeight: "100vh", background: "#050B18",
+        display: "flex", alignItems: "center", justifyContent: "center",
+        fontFamily: "var(--font-barlow, system-ui, sans-serif)",
+        padding: "24px"
+      }}>
+        {/* Background glow */}
+        <div style={{ position: "fixed", top: "20%", left: "50%", transform: "translateX(-50%)", width: "600px", height: "400px", background: "radial-gradient(ellipse, rgba(14,165,233,0.12) 0%, transparent 70%)", pointerEvents: "none" }} />
+
+        <div style={{
+          width: "100%", maxWidth: "440px",
+          background: "linear-gradient(135deg, rgba(11,19,43,0.95), rgba(7,14,32,0.98))",
+          border: "1px solid rgba(56, 189, 248, 0.2)",
+          borderRadius: "20px",
+          padding: "48px 40px",
+          boxShadow: "0 30px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(56,189,248,0.08), inset 0 1px 0 rgba(255,255,255,0.05)",
+          position: "relative"
+        }}>
+          {/* Logo */}
+          <div style={{ textAlign: "center", marginBottom: "32px" }}>
+            <div style={{ display: "inline-flex", background: "#ffffff", padding: "8px 20px", borderRadius: "10px", marginBottom: "20px" }}>
+              <img src="/images/strahl-logo-final.png" alt="STRAHL" style={{ height: "28px", width: "auto" }} />
+            </div>
+            <p style={{ fontSize: "11px", letterSpacing: "3px", color: "#38BDF8", fontWeight: "700", textTransform: "uppercase", margin: "0 0 6px 0" }}>Admin Portal</p>
+            <h1 style={{ fontSize: "22px", fontWeight: "800", color: "#ffffff", margin: 0 }}>Management Studio</h1>
+            <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.4)", marginTop: "8px" }}>Sign in to access the control panel</p>
+          </div>
+
+          {/* Login Form */}
+          <form onSubmit={handleLogin} style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+            {/* ID Field */}
+            <div>
+              <label style={{ display: "block", fontSize: "12px", fontWeight: "600", color: "rgba(255,255,255,0.6)", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "8px" }}>Admin ID</label>
+              <input
+                type="text"
+                value={loginId}
+                onChange={e => { setLoginId(e.target.value); setLoginError(""); }}
+                placeholder="Enter your admin ID"
+                autoComplete="username"
+                style={{
+                  width: "100%", padding: "12px 16px", borderRadius: "10px",
+                  background: "rgba(255,255,255,0.05)",
+                  border: loginError ? "1.5px solid rgba(239,68,68,0.6)" : "1.5px solid rgba(255,255,255,0.1)",
+                  color: "#ffffff", fontSize: "14px", outline: "none",
+                  transition: "border 0.2s", boxSizing: "border-box"
+                }}
+              />
+            </div>
+
+            {/* Password Field */}
+            <div>
+              <label style={{ display: "block", fontSize: "12px", fontWeight: "600", color: "rgba(255,255,255,0.6)", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "8px" }}>Password</label>
+              <div style={{ position: "relative" }}>
+                <input
+                  type={showLoginPass ? "text" : "password"}
+                  value={loginPass}
+                  onChange={e => { setLoginPass(e.target.value); setLoginError(""); }}
+                  placeholder="Enter your password"
+                  autoComplete="current-password"
+                  style={{
+                    width: "100%", padding: "12px 44px 12px 16px", borderRadius: "10px",
+                    background: "rgba(255,255,255,0.05)",
+                    border: loginError ? "1.5px solid rgba(239,68,68,0.6)" : "1.5px solid rgba(255,255,255,0.1)",
+                    color: "#ffffff", fontSize: "14px", outline: "none",
+                    transition: "border 0.2s", boxSizing: "border-box"
+                  }}
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowLoginPass(!showLoginPass)}
+                  style={{
+                    position: "absolute", right: "12px", top: "50%", transform: "translateY(-50%)",
+                    background: "none", border: "none", cursor: "pointer",
+                    color: "rgba(255,255,255,0.4)", padding: "4px", display: "flex", alignItems: "center"
+                  }}
+                  aria-label={showLoginPass ? "Hide password" : "Show password"}
+                >
+                  {showLoginPass ? (
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                      <line x1="1" y1="1" x2="23" y2="23"/>
+                    </svg>
+                  ) : (
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                      <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                  )}
+                </button>
+              </div>
+            </div>
+
+            {/* Error Message */}
+            {loginError && (
+              <div style={{ background: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.3)", borderRadius: "8px", padding: "10px 14px", display: "flex", alignItems: "center", gap: "8px" }}>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#F87171" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <span style={{ fontSize: "13px", color: "#F87171", fontWeight: "500" }}>{loginError}</span>
+              </div>
+            )}
+
+            {/* Submit */}
+            <button
+              type="submit"
+              style={{
+                marginTop: "8px", padding: "14px", borderRadius: "10px",
+                background: "linear-gradient(135deg, #0EA5E9, #2563EB)",
+                border: "none", color: "#ffffff", fontSize: "14px", fontWeight: "700",
+                cursor: "pointer", letterSpacing: "0.5px",
+                boxShadow: "0 8px 24px rgba(37,99,235,0.4)",
+                transition: "transform 0.15s, box-shadow 0.15s"
+              }}
+            >
+              Sign In to Admin Panel
+            </button>
+          </form>
+
+          {/* Footer */}
+          <p style={{ textAlign: "center", fontSize: "11px", color: "rgba(255,255,255,0.2)", marginTop: "28px" }}>
+            STRAHL™ CMS — Restricted Access
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   const fetchData = async () => {
     try {
@@ -114,12 +282,24 @@ export default function AdminPage() {
         </div>
 
         {/* TOP BUTTONS */}
-        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
           {saveMessage && (
             <div style={{ padding: "6px 14px", borderRadius: "20px", fontSize: "12.5px", fontWeight: "600", background: saveMessage.type === "success" ? "rgba(16, 185, 129, 0.2)" : "rgba(239, 68, 68, 0.2)", border: saveMessage.type === "success" ? "1px solid #10B981" : "1px solid #EF4444", color: saveMessage.type === "success" ? "#34D399" : "#F87171" }}>
               {saveMessage.text}
             </div>
           )}
+
+          {/* Settings Button */}
+          <button onClick={() => { setShowSettings(true); setNewId(credentials.id); setNewPass(credentials.password); }} style={{ padding: "8px 14px", borderRadius: "8px", background: "rgba(255, 255, 255, 0.06)", border: "1px solid rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.7)", fontSize: "12.5px", fontWeight: "600", cursor: "pointer", display: "flex", alignItems: "center", gap: "6px" }}>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            Settings
+          </button>
+
+          {/* Logout Button */}
+          <button onClick={() => { setIsLoggedIn(false); setLoginId(""); setLoginPass(""); }} style={{ padding: "8px 14px", borderRadius: "8px", background: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.25)", color: "#F87171", fontSize: "12.5px", fontWeight: "600", cursor: "pointer", display: "flex", alignItems: "center", gap: "6px" }}>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            Logout
+          </button>
 
           <Link href="/" target="_blank" style={{ padding: "8px 16px", borderRadius: "8px", background: "rgba(255, 255, 255, 0.08)", border: "1px solid rgba(255,255,255,0.15)", color: "#ffffff", textDecoration: "none", fontSize: "12.5px", fontWeight: "600", display: "flex", alignItems: "center", gap: "6px" }}>
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
@@ -131,6 +311,68 @@ export default function AdminPage() {
           </button>
         </div>
       </header>
+
+      {/* ─── SETTINGS MODAL ─────────────────────────────────────── */}
+      {showSettings && (
+        <div style={{ position: "fixed", inset: 0, zIndex: 9999, background: "rgba(0,0,0,0.75)", backdropFilter: "blur(6px)", display: "flex", alignItems: "center", justifyContent: "center", padding: "24px" }} onClick={() => setShowSettings(false)}>
+          <div style={{ background: "linear-gradient(135deg, #0B132B, #070E20)", border: "1px solid rgba(56,189,248,0.2)", borderRadius: "16px", padding: "36px", width: "100%", maxWidth: "420px", boxShadow: "0 30px 80px rgba(0,0,0,0.7)" }} onClick={e => e.stopPropagation()}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "24px" }}>
+              <div>
+                <p style={{ fontSize: "10px", letterSpacing: "2px", color: "#38BDF8", fontWeight: "700", textTransform: "uppercase", margin: "0 0 4px 0" }}>Access Control</p>
+                <h2 style={{ fontSize: "18px", fontWeight: "800", color: "#ffffff", margin: 0 }}>Change Credentials</h2>
+              </div>
+              <button onClick={() => setShowSettings(false)} style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "8px", color: "rgba(255,255,255,0.6)", cursor: "pointer", padding: "6px 10px", fontSize: "16px" }}>✕</button>
+            </div>
+
+            <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
+              {/* New ID */}
+              <div>
+                <label style={{ display: "block", fontSize: "11px", fontWeight: "600", color: "rgba(255,255,255,0.5)", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "7px" }}>New Admin ID</label>
+                <input
+                  type="text"
+                  value={newId}
+                  onChange={e => setNewId(e.target.value)}
+                  placeholder="Enter new admin ID"
+                  style={{ width: "100%", padding: "11px 14px", borderRadius: "8px", background: "rgba(255,255,255,0.05)", border: "1.5px solid rgba(255,255,255,0.1)", color: "#ffffff", fontSize: "14px", outline: "none", boxSizing: "border-box" }}
+                />
+              </div>
+
+              {/* New Password */}
+              <div>
+                <label style={{ display: "block", fontSize: "11px", fontWeight: "600", color: "rgba(255,255,255,0.5)", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "7px" }}>New Password</label>
+                <div style={{ position: "relative" }}>
+                  <input
+                    type={showNewPass ? "text" : "password"}
+                    value={newPass}
+                    onChange={e => setNewPass(e.target.value)}
+                    placeholder="Enter new password"
+                    style={{ width: "100%", padding: "11px 40px 11px 14px", borderRadius: "8px", background: "rgba(255,255,255,0.05)", border: "1.5px solid rgba(255,255,255,0.1)", color: "#ffffff", fontSize: "14px", outline: "none", boxSizing: "border-box" }}
+                  />
+                  <button type="button" onClick={() => setShowNewPass(!showNewPass)} style={{ position: "absolute", right: "10px", top: "50%", transform: "translateY(-50%)", background: "none", border: "none", cursor: "pointer", color: "rgba(255,255,255,0.4)", padding: "4px", display: "flex", alignItems: "center" }}>
+                    {showNewPass ? (
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+                    ) : (
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    )}
+                  </button>
+                </div>
+              </div>
+
+              {settingsSaved && (
+                <div style={{ background: "rgba(16,185,129,0.1)", border: "1px solid rgba(16,185,129,0.3)", borderRadius: "8px", padding: "10px 14px", color: "#34D399", fontSize: "13px", fontWeight: "600", textAlign: "center" }}>✓ Credentials updated successfully!</div>
+              )}
+
+              <button
+                onClick={handleSaveSettings}
+                disabled={!newId.trim() || !newPass.trim()}
+                style={{ marginTop: "6px", padding: "12px", borderRadius: "8px", background: "linear-gradient(135deg, #0EA5E9, #2563EB)", border: "none", color: "#ffffff", fontSize: "13.5px", fontWeight: "700", cursor: (!newId.trim() || !newPass.trim()) ? "not-allowed" : "pointer", opacity: (!newId.trim() || !newPass.trim()) ? 0.5 : 1, boxShadow: "0 6px 20px rgba(37,99,235,0.35)" }}
+              >
+                Save New Credentials
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ADMIN TABS HEADER */}
       <div style={{ background: "#070E20", borderBottom: "1px solid rgba(255, 255, 255, 0.06)", padding: "0 30px", overflowX: "auto" }}>
