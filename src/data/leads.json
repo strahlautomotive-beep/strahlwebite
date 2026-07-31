@@ -1,0 +1,62 @@
+[
+  {
+    "id": "lead-1785502295220",
+    "name": "Adnan Ali",
+    "email": "addyfitness21@gmail.com",
+    "phone": "09778803677",
+    "company": "Addy Fitness",
+    "country": "",
+    "message": "saccds",
+    "status": "New",
+    "remark": "Initial inquiry received via website form.",
+    "createdAt": "2026-07-31T12:51:35.220Z"
+  },
+  {
+    "id": "lead-1785502018407",
+    "name": "Adnan Ali",
+    "email": "sayedadnanali905@gmail.com",
+    "phone": "+19778803677",
+    "company": "Addy Fitness",
+    "country": "",
+    "message": "Product Enquiry: Airmatic Compressor",
+    "status": "New",
+    "remark": "Initial inquiry received via website form.",
+    "createdAt": "2026-07-31T12:46:58.407Z"
+  },
+  {
+    "id": "lead-1785501997494",
+    "name": "Adnan Ali",
+    "email": "sayedadnanali905@gmail.com",
+    "phone": "9778803677",
+    "company": "Addy Fitness",
+    "country": "",
+    "message": "helloa ibdihbeka",
+    "status": "New",
+    "remark": "Initial inquiry received via website form.",
+    "createdAt": "2026-07-31T12:46:37.494Z"
+  },
+  {
+    "id": "lead-101",
+    "name": "Michael Sterling",
+    "email": "m.sterling@euroautoparts.de",
+    "phone": "+49 89 2341 8920",
+    "company": "EuroAuto Parts GmbH",
+    "country": "Germany",
+    "message": "Interested in regional distribution terms for air suspension struts and compressors in Southern Germany.",
+    "status": "Contacted",
+    "remark": "Sent B2B price catalog on July 25. Following up next Tuesday.",
+    "createdAt": "2026-07-25T14:30:00Z"
+  },
+  {
+    "id": "lead-102",
+    "name": "Carlos Mendez",
+    "email": "carlos.m@ibericasuspensiones.es",
+    "phone": "+34 91 555 4321",
+    "company": "Iberica Suspensiones S.L.",
+    "country": "Spain",
+    "message": "Looking for OEM replacement valve blocks and control arms. Minimum order quantities required.",
+    "status": "New",
+    "remark": "Initial enquiry received.",
+    "createdAt": "2026-07-27T09:15:00Z"
+  }
+]

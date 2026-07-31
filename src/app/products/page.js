@@ -8,9 +8,11 @@ import Link from "next/link";
 const PRODUCTS_DATA = [
   {
     id: "air-suspension-strut",
-    name: "Air Suspension Strut",
-    cat: "Air Suspension",
+    name: "Airmatic Shock Absorber",
+    cat: "Air Suspension System",
     image: "/images/product_1.jpg",
+    isBestSeller: true,
+    description: "Designed to restore original ride comfort and suspension performance, the STRAHL Airmatic Shock Absorber integrates an advanced air spring with precision damping technology. Built as a direct OEM replacement, it delivers exceptional stability, automatic ride height adjustment, and long-lasting durability.",
     usps: [
       "Custom-cured reinforced multi-ply rubber sleeve for maximum flexing longevity.",
       "Individually dyno-tested to ensure match with OEM damping curves.",
@@ -28,9 +30,10 @@ const PRODUCTS_DATA = [
   },
   {
     id: "air-suspension-compressor",
-    name: "Air Suspension Compressor",
-    cat: "Air Suspension",
+    name: "Airmatic Compressor",
+    cat: "Air Suspension System",
     image: "/images/product_2.jpg",
+    description: "Reliable air pressure is essential for the performance of any air suspension system. STRAHL Airmatic Compressors are precision-engineered to provide rapid pressure build-up, quiet operation, and dependable performance, ensuring consistent vehicle ride height and comfort.",
     usps: [
       "Heavy-duty internal motor with integrated thermal overload protection.",
       "Precision piston ring compound prevents premature wear and pressure drop.",
@@ -48,9 +51,10 @@ const PRODUCTS_DATA = [
   },
   {
     id: "valve-block",
-    name: "Valve Block",
-    cat: "Air Suspension",
+    name: "Airmatic Valve Block",
+    cat: "Air Suspension System",
     image: "/images/product_3.jpg",
+    description: "Precise airflow management is critical to the efficiency of electronically controlled air suspension systems. The STRAHL Airmatic Valve Block accurately distributes compressed air between the compressor, reservoir, and air springs, ensuring smooth height adjustment and dependable system operation.",
     usps: [
       "High-precision solenoid valves prevent system leakages and vehicle sag.",
       "Corrosion-resistant anodized aluminum block body.",
@@ -69,8 +73,9 @@ const PRODUCTS_DATA = [
   {
     id: "upper-control-arm",
     name: "Upper Control Arm",
-    cat: "Suspension",
+    cat: "Suspension Components",
     image: "/images/product_4.jpg",
+    description: "Accurate wheel alignment and suspension articulation depend on a high-quality upper control arm. Manufactured to OEM specifications, STRAHL Upper Control Arms provide excellent durability, smooth handling, and enhanced steering precision.",
     usps: [
       "Forged steel or aluminum body matches factory structural stiffness.",
       "Natural rubber bushings isolate Noise, Vibration, and Harshness (NVH).",
@@ -89,8 +94,9 @@ const PRODUCTS_DATA = [
   {
     id: "lower-control-arm",
     name: "Lower Control Arm",
-    cat: "Suspension",
+    cat: "Suspension Components",
     image: "/images/product_5.jpg",
+    description: "Engineered for strength and precision, the STRAHL Lower Control Arm maintains correct suspension geometry while improving steering stability and ride comfort. Premium bushings and precision ball joints help reduce vibration and ensure reliable performance over extended service life.",
     usps: [
       "Heavy-wall structural steel tubing or forged alloy composition.",
       "Hydraulic bushings pre-installed for superior driving comfort.",
@@ -109,8 +115,9 @@ const PRODUCTS_DATA = [
   {
     id: "stabilizer-link",
     name: "Stabilizer Link",
-    cat: "Suspension",
+    cat: "Suspension Components",
     image: "/images/product_6.jpg",
+    description: "Vehicle stability during cornering relies on the effective transfer of force between the suspension and anti-roll bar. STRAHL Stabilizer Links are engineered with high-strength materials and precision ball joints to reduce body roll while enhancing handling and driving confidence.",
     usps: [
       "Optimized rod diameter resists high torsional sway forces.",
       "Spherical joint inserts designed with low-friction POM bearings.",
@@ -131,6 +138,7 @@ const PRODUCTS_DATA = [
     name: "Tie Rod End",
     cat: "Steering",
     image: "/images/product_7.jpg",
+    description: "Smooth and responsive steering begins with precise steering linkage components. STRAHL Tie Rod Ends are manufactured to deliver accurate steering input, improved directional stability, and long-lasting reliability under demanding driving conditions.",
     usps: [
       "Induction-hardened ball pins provide smooth steering and long wear life.",
       "Internal high-performance synthetic grease reduces friction.",
@@ -147,10 +155,32 @@ const PRODUCTS_DATA = [
     }
   },
   {
+    id: "steering-rack-pinion",
+    name: "Steering Rack & Pinion",
+    cat: "Steering",
+    image: "/images/product_14.png",
+    description: "Built for smooth articulation and dependable steering performance, STRAHL Steering Rack & Pinion units maintain accurate suspension movement while minimising wear. Precision-machined components and durable sealing ensure extended service life and reliable operation.",
+    usps: [
+      "Precision-machined helical pinion gear provides smooth, responsive steering.",
+      "Premium internal seals prevent hydraulic power steering fluid leakage.",
+      "Hardened steel guide bar and rack teeth resist heavy road impact.",
+      "Pre-installed premium rubber bellows protect internal rack gears."
+    ],
+    specs: {
+      "Steering Type": "Hydraulic Power Steering Rack",
+      "Housing Material": "Die-cast Aluminum Alloy",
+      "Input Shaft Style": "Splined Shaft",
+      "Rack Stroke": "145 mm total travel",
+      "Certification": "IATF 16949 Sourced",
+      "Warranty": "1 Year B2B Sourcing"
+    }
+  },
+  {
     id: "ac-compressor",
     name: "AC Compressor",
-    cat: "AC System",
+    cat: "Climate Control Components",
     image: "/images/product_8.jpg",
+    description: "Efficient refrigerant compression is essential for consistent cabin comfort. STRAHL AC Compressors are manufactured with precision-engineered internal components to deliver quiet operation, excellent cooling performance, and reliable durability across varying operating conditions.",
     usps: [
       "Precision swashplate design delivers variable displacement smooth cooling.",
       "Built-in pressure relief valve and thermal control switches.",
@@ -169,8 +199,9 @@ const PRODUCTS_DATA = [
   {
     id: "ac-condenser",
     name: "AC Condenser",
-    cat: "AC System",
+    cat: "Climate Control Components",
     image: "/images/product_9.jpg",
+    description: "Optimized heat dissipation is the key to efficient air conditioning performance. STRAHL AC Condensers are constructed from corrosion-resistant aluminum and engineered to maximize thermal efficiency, ensuring dependable cooling even under demanding conditions.",
     usps: [
       "Micro-channel aluminum tubes maximize heat rejection rates.",
       "Integrated receiver drier cartridge prevents moisture damage.",
@@ -189,8 +220,9 @@ const PRODUCTS_DATA = [
   {
     id: "cooling-coil-evaporator",
     name: "Cooling Coil / Evaporator",
-    cat: "AC System",
+    cat: "Climate Control Components",
     image: "/images/product_10.jpg",
+    description: "Effective cabin cooling begins with efficient heat absorption. STRAHL Evaporators feature precision-engineered aluminum cores that maximize thermal efficiency while providing rapid cooling and improved humidity control for enhanced passenger comfort.",
     usps: [
       "Highly efficient plate-fin core provides rapid cabin cooling.",
       "Anti-bacterial coating prevents mold formation and odor.",
@@ -209,8 +241,9 @@ const PRODUCTS_DATA = [
   {
     id: "expansion-valve",
     name: "Expansion Valve",
-    cat: "AC System",
+    cat: "Climate Control Components",
     image: "/images/product_11.jpg",
+    description: "Accurate refrigerant flow control plays a vital role in air conditioning efficiency. STRAHL Expansion Valves precisely regulate refrigerant entering the evaporator, maintaining optimal pressure and temperature for reliable and consistent cooling performance.",
     usps: [
       "Precision thermal charge element guarantees accurate flow control.",
       "Spring-loaded internal metering valve maintains steady superheat levels.",
@@ -226,66 +259,6 @@ const PRODUCTS_DATA = [
       "Warranty": "1 Year B2B Sourcing"
     }
   },
-  {
-    id: "hydraulic-engine-mount",
-    name: "Hydraulic Engine Mount",
-    cat: "Engine Mounts",
-    image: "/images/product_12.png",
-    usps: [
-      "Hydraulic fluid-filled chamber dampens low-frequency engine vibrations.",
-      "Premium natural rubber compounding isolates high-frequency NVH.",
-      "Reinforced steel housing designed to withstand extreme torque shifts.",
-      "Individually tested for hydraulic pressure seal integrity."
-    ],
-    specs: {
-      "Position": "Front Right / Front Left",
-      "Mount Type": "Hydraulic (Fluid-Filled)",
-      "Material": "Natural Rubber & Steel Alloy",
-      "Stiffness Rating": "OEM Calibrated",
-      "Certification": "IATF 16949 Sourced",
-      "Warranty": "1 Year B2B Sourcing"
-    }
-  },
-  {
-    id: "transmission-mount",
-    name: "Transmission Mount",
-    cat: "Engine Mounts",
-    image: "/images/product_13.png",
-    usps: [
-      "Specially formulated elastomer compound maintains drivetrain alignment.",
-      "Controls engine and transmission rocking motion during shifts.",
-      "High-grade zinc plating resists corrosion under road debris impact.",
-      "Designed to meet or exceed original NVH dampening specifications."
-    ],
-    specs: {
-      "Position": "Rear Transmission Support",
-      "Mount Type": "Solid Elastomer / Rubber-Metal",
-      "Material": "Synthetic Rubber & Mild Steel",
-      "Hardness": "60 Shore A Durometer",
-      "Certification": "ISO 9001 Sourced",
-      "Warranty": "1 Year B2B Sourcing"
-    }
-  },
-  {
-    id: "steering-rack-pinion",
-    name: "Steering Rack & Pinion",
-    cat: "Steering",
-    image: "/images/product_14.png",
-    usps: [
-      "Precision-machined helical pinion gear provides smooth, responsive steering.",
-      "Premium internal seals prevent hydraulic power steering fluid leakage.",
-      "Hardened steel guide bar and rack teeth resist heavy road impact.",
-      "Pre-installed premium rubber bellows protect internal rack gears."
-    ],
-    specs: {
-      "Steering Type": "Hydraulic Power Steering Rack",
-      "Housing Material": "Die-cast Aluminum Alloy",
-      "Input Shaft Style": "Splined Shaft",
-      "Rack Stroke": "145 mm total travel",
-      "Certification": "IATF 16949 Sourced",
-      "Warranty": "1 Year B2B Sourcing"
-    }
-  }
 ];
 
 // Reusable Modal Component using HTMLDialogElement & Fallbacks
@@ -341,20 +314,30 @@ function ProductDetailModal({ product, onClose }) {
     dialogRef.current?.close();
   };
 
-  const handleFormSubmit = (e) => {
+  const handleEnquirySubmit = (e) => {
     e.preventDefault();
     const { name, phone, company, email } = formData;
-    
-    // User requested message format (polished for B2B professionalism): "Hi, I am {name} and I am enquiring about the {product name}"
-    const message = `Hi, I am ${name} and I am enquiring about the ${product.name}.\n\n` +
-      `Here are my B2B contact details:\n` +
-      `- Name: ${name}\n` +
-      `- Phone: ${phone}\n` +
-      `- Company: ${company}\n` +
-      `- Email: ${email}`;
-      
-    const whatsappUrl = `https://wa.me/9778803677?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, "_blank");
+
+    // 1. Save to admin leads panel
+    fetch("/api/leads", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name,
+        email,
+        phone,
+        company,
+        country: "",
+        message: `Product Enquiry: ${product.name}`,
+      }),
+    }).catch(() => {});
+
+    // 2. Open user's email client with product name pre-filled
+    const subject = encodeURIComponent(`Product Enquiry: ${product.name}`);
+    const body = encodeURIComponent(
+      `Hi STRAHL Team,\n\nI am enquiring about the ${product.name}.\n\nMy contact details:\n- Name: ${name}\n- Phone: ${phone}\n- Company: ${company}\n- Email: ${email}\n\nPlease send me more information.\n\nThank you.`
+    );
+    window.location.href = `mailto:info@strahl.com?subject=${subject}&body=${body}`;
     handleClose();
   };
 
@@ -374,124 +357,68 @@ function ProductDetailModal({ product, onClose }) {
 
       <div className="modal-body">
         {showForm ? (
-          <form onSubmit={handleFormSubmit} className="modal-form">
-            <h3 className="modal-form-title">Hi, I m {formData.name || "..."}</h3>
-            
-            <div className="modal-form-group">
-              <label className="modal-form-label">Name</label>
-              <input 
-                type="text" 
-                required 
-                className="modal-form-input"
-                placeholder="Your Full Name"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              />
-            </div>
+          /* ── ENQUIRY FORM ── */
+          <form onSubmit={handleEnquirySubmit} className="modal-form">
+            <p style={{ fontSize: "13.5px", color: "var(--text-muted)", margin: "0 0 20px 0", lineHeight: "1.65" }}>
+              Enquiring about <strong style={{ color: "var(--accent-blue)" }}>{product.name}</strong>. Fill in your details — your email will open pre-filled and your enquiry will be saved for our team.
+            </p>
 
-            <div className="modal-form-group">
-              <label className="modal-form-label">Phone Number</label>
-              <input 
-                type="tel" 
-                required 
-                className="modal-form-input"
-                placeholder="Phone Number (e.g. +91 98765 43210)"
-                value={formData.phone}
-                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              />
-            </div>
+            {[
+              { label: "Full Name", key: "name", type: "text", placeholder: "Your Full Name" },
+              { label: "Email Address", key: "email", type: "email", placeholder: "your.email@company.com" },
+              { label: "Phone Number", key: "phone", type: "tel", placeholder: "+91 98765 43210" },
+              { label: "Company Name", key: "company", type: "text", placeholder: "Your Company Name" },
+            ].map(({ label, key, type, placeholder }) => (
+              <div className="modal-form-group" key={key}>
+                <label className="modal-form-label">{label}</label>
+                <input
+                  type={type}
+                  required
+                  className="modal-form-input"
+                  placeholder={placeholder}
+                  value={formData[key]}
+                  onChange={(e) => setFormData({ ...formData, [key]: e.target.value })}
+                />
+              </div>
+            ))}
 
-            <div className="modal-form-group">
-              <label className="modal-form-label">Company Name</label>
-              <input 
-                type="text" 
-                required 
-                className="modal-form-input"
-                placeholder="Your Company Name"
-                value={formData.company}
-                onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-              />
-            </div>
-
-            <div className="modal-form-group">
-              <label className="modal-form-label">Email Address</label>
-              <input 
-                type="email" 
-                required 
-                className="modal-form-input"
-                placeholder="your.email@company.com"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              />
-            </div>
-
-            <div style={{ display: "flex", gap: "12px", marginTop: "15px" }}>
-              <button 
-                type="submit" 
-                className="modal-cta-btn"
-                style={{ flex: 1, padding: "14px 24px" }}
-              >
-                Submit via WhatsApp
+            <div style={{ display: "flex", gap: "12px", marginTop: "20px" }}>
+              <button type="submit" className="modal-cta-btn" style={{ flex: 1, padding: "14px 24px" }}>
+                ✉&nbsp; Send Enquiry via Email
               </button>
-              <button 
-                type="button" 
-                className="filter-btn" 
+              <button
+                type="button"
+                className="filter-btn"
                 onClick={() => setShowForm(false)}
-                style={{ padding: "14px 24px", borderRadius: "30px", border: "1px solid var(--border-light)" }}
+                style={{ padding: "14px 20px", borderRadius: "30px", border: "1px solid var(--border-light)" }}
               >
-                Back to Details
+                Back
               </button>
             </div>
           </form>
         ) : (
+          /* ── PRODUCT VIEW: Image + Description + CTA only ── */
           <div className="modal-grid">
             <div className="modal-img-wrap">
-              <Image
-                src={product.image}
-                alt={product.name}
-                width={350}
-                height={350}
-                style={{ objectFit: "cover" }}
-              />
+              <Image src={product.image} alt={product.name} width={350} height={350} style={{ objectFit: "cover" }} />
             </div>
-            <div className="modal-info">
-              <div>
-                <h3 className="modal-section-title">Unique Selling Propositions (USPs)</h3>
-                <ul className="modal-usp-list">
-                  {product.usps.map((usp, i) => (
-                    <li key={i}>
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <polyline points="20 6 9 17 4 12"/>
-                      </svg>
-                      <span>{usp}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="modal-section-title">Technical Specifications</h3>
-                <table className="modal-specs-table">
-                  <tbody>
-                    {Object.entries(product.specs).map(([key, value]) => (
-                      <tr key={key}>
-                        <td>{key}</td>
-                        <td>{value}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-
-              <div style={{ marginTop: "10px" }}>
-                <button 
-                  onClick={() => setShowForm(true)} 
-                  className="modal-cta-btn"
-                  style={{ width: "100%", border: "none" }}
-                >
-                  Enquiry Now
-                </button>
-              </div>
+            <div className="modal-info" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "24px" }}>
+              {product.description ? (
+                <p style={{ fontSize: "14.5px", lineHeight: "1.85", color: "var(--text-muted)", margin: 0 }}>
+                  {product.description}
+                </p>
+              ) : (
+                <p style={{ fontSize: "14.5px", lineHeight: "1.85", color: "var(--text-muted)", margin: 0 }}>
+                  Premium OE replacement component engineered for reliability and direct-fit installation.
+                </p>
+              )}
+              <button
+                onClick={() => setShowForm(true)}
+                className="modal-cta-btn"
+                style={{ width: "100%", border: "none", padding: "16px 24px", fontSize: "15px", fontWeight: "700", marginTop: "8px" }}
+              >
+                Enquiry Now
+              </button>
             </div>
           </div>
         )}
@@ -505,20 +432,28 @@ import { initialContent } from "@/data/initialContent";
 export default function ProductsPage() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [productsList, setProductsList] = useState(initialContent.products);
+  // Use the full hardcoded PRODUCTS_DATA as default; API can override with admin-edited content
+  const [productsList, setProductsList] = useState(PRODUCTS_DATA);
 
   useEffect(() => {
     fetch("/api/content")
       .then((res) => res.json())
       .then((data) => {
         if (data && Array.isArray(data.products) && data.products.length > 0) {
-          setProductsList(data.products);
+          // Normalize API specs: convert array format [{label,value}] to plain object
+          const normalized = data.products.map((p) => ({
+            ...p,
+            specs: Array.isArray(p.specs)
+              ? p.specs.reduce((acc, { label, value }) => ({ ...acc, [label]: value }), {})
+              : p.specs,
+          }));
+          setProductsList(normalized);
         }
       })
-      .catch((err) => console.log("Using initial products fallback:", err));
+      .catch((err) => console.log("Using PRODUCTS_DATA fallback:", err));
   }, []);
 
-  const categories = ["All", "Air Suspension System", "Air Suspension", "Suspension Components", "Suspension", "Steering Components", "Steering", "Climate Control Components", "AC System", "Engine Mounts"];
+  const categories = ["All", "Air Suspension System", "Suspension Components", "Steering", "Climate Control Components"];
 
   const filteredProducts = activeCategory === "All"
     ? productsList
@@ -528,10 +463,10 @@ export default function ProductsPage() {
     <main className="sec">
       {/* HEADER */}
       <div style={{ textAlign: "center", marginBottom: "50px" }}>
-        <span className="sec-eyebrow">Product Catalog</span>
-        <h1 className="sec-title">Sourcing Portfolio</h1>
+        <span className="sec-eyebrow">PRODUCT CATALOG</span>
+        <h1 className="sec-title">Sourcing Portfolio – Built for Every Mile</h1>
         <p className="sec-sub" style={{ margin: "0 auto", color: "#000000", fontWeight: "400" }}>
-          Explore our range of premium replacement parts, engineered under strict quality systems for distributors and fleet managers.
+          A comprehensive range of automotive components designed to meet the evolving demands of today&apos;s aftermarket.
         </p>
       </div>
 

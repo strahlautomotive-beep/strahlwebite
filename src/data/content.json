@@ -215,87 +215,75 @@
   "products": [
     {
       "id": 1,
-      "name": "Air Suspension Strut",
+      "name": "Airmatic Shock Absorber",
       "cat": "Air Suspension System",
       "sku": "ST-AS-9001",
       "oeNumber": "4Z7616051A / 2203202438",
       "image": "/images/product_1.jpg",
       "isBestSeller": true,
       "usps": [
-        "Multi-ply rubber sleeve engineered for thermal stability (-40°C to +80°C)",
-        "Integrated CNC-machined top mount for direct OEM fitment",
-        "Internal hydraulic damper tuned for European ride dynamics"
+        "Custom-cured reinforced multi-ply rubber sleeve for maximum flexing longevity.",
+        "Individually dyno-tested to ensure match with OEM damping curves.",
+        "High-strength steel crimping rings ensure leak-free seal up to 2.0 MPa.",
+        "Fully compatible with original electronic damping valves."
       ],
-      "specs": [
-        {
-          "label": "Operating Pressure",
-          "value": "up to 2.0 MPa"
-        },
-        {
-          "label": "Material Specification",
-          "value": "High-grade elastomer & anodized T6 aluminum"
-        },
-        {
-          "label": "Warranty Coverage",
-          "value": "12 Months / Unlimited Mileage"
-        }
-      ]
+      "specs": {
+        "Placement": "Front Left / Front Right",
+        "Material": "Reinforced Rubber & Steel Alloy",
+        "Fitment Type": "Direct OEM Replacement",
+        "Operating Pressure": "Up to 2.0 MPa",
+        "Certification": "IATF 16949 Sourced",
+        "Warranty": "1 Year B2B Sourcing"
+      },
+      "description": "Designed to restore original ride comfort and suspension performance, the STRAHL Airmatic Shock Absorber integrates an advanced air spring with precision damping technology. Built as a direct OEM replacement, it delivers exceptional stability, automatic ride height adjustment, and long-lasting durability."
     },
     {
       "id": 2,
-      "name": "Air Suspension Compressor",
+      "name": "Airmatic Compressor",
       "cat": "Air Suspension System",
       "sku": "ST-AC-9002",
       "oeNumber": "2113200304 / 4E0616007D",
       "image": "/images/product_2.jpg",
       "isBestSeller": false,
       "usps": [
-        "Heavy-duty electric motor with thermal overload protection",
-        "Integrated dryer unit ensuring moisture-free air delivery",
-        "Low-noise vibration dampening mountings included"
+        "Heavy-duty internal motor with integrated thermal overload protection.",
+        "Precision piston ring compound prevents premature wear and pressure drop.",
+        "Integrated air dryer ensures moisture-free delivery to air bellows.",
+        "Pre-assembled plug-and-play wiring harness and brackets included."
       ],
-      "specs": [
-        {
-          "label": "Voltage",
-          "value": "12V DC"
-        },
-        {
-          "label": "Max Amperage",
-          "value": "35A"
-        },
-        {
-          "label": "Protection Rating",
-          "value": "IP67 Dust & Water Resistant"
-        }
-      ]
+      "specs": {
+        "Motor Type": "12V DC heavy-duty motor",
+        "Max Pressure": "1.8 MPa",
+        "Housing Material": "Die-cast Aluminum",
+        "Cooling": "Integrated heatsink",
+        "Certification": "ISO 9001 / IATF Sourced",
+        "Warranty": "1 Year B2B Sourcing"
+      },
+      "description": "Reliable air pressure is essential for the performance of any air suspension system. STRAHL Airmatic Compressors are precision-engineered to provide rapid pressure build-up, quiet operation, and dependable performance, ensuring consistent vehicle ride height and comfort."
     },
     {
       "id": 3,
-      "name": "Valve Block",
+      "name": "Airmatic Valve Block",
       "cat": "Air Suspension System",
       "sku": "ST-VB-9003",
       "oeNumber": "2123200358 / 4F0616013",
       "image": "/images/product_3.jpg",
       "isBestSeller": false,
       "usps": [
-        "Precision solenoid valving for rapid pressure adjustment",
-        "Corrosion-resistant manifold block construction",
-        "Direct plug-and-play OE electrical connector"
+        "High-precision solenoid valves prevent system leakages and vehicle sag.",
+        "Corrosion-resistant anodized aluminum block body.",
+        "Heavy-duty internal O-rings prevent cross-port air migration.",
+        "Direct plug match with factory vehicle leveling systems."
       ],
-      "specs": [
-        {
-          "label": "Ports",
-          "value": "6-way pneumatic distribution"
-        },
-        {
-          "label": "Operating Temp",
-          "value": "-40°C to +105°C"
-        },
-        {
-          "label": "Response Time",
-          "value": "< 50ms solenoid actuation"
-        }
-      ]
+      "specs": {
+        "Port Count": "6-Port Air Line Connections",
+        "Solenoid Voltage": "12V DC Solenoids",
+        "Block Material": "Anodized Aluminum Alloy",
+        "Max Temp Limit": "-40C to +120C",
+        "Certification": "ISO 9001 Sourced",
+        "Warranty": "1 Year B2B Sourcing"
+      },
+      "description": "Precise airflow management is critical to the efficiency of electronically controlled air suspension systems. The STRAHL Airmatic Valve Block accurately distributes compressed air between the compressor, reservoir, and air springs, ensuring smooth height adjustment and dependable system operation."
     },
     {
       "id": 4,
@@ -306,24 +294,20 @@
       "image": "/images/product_4.jpg",
       "isBestSeller": false,
       "usps": [
-        "Forged aircraft-grade aluminum alloy construction",
-        "Pre-installed high-density rubber bushings",
-        "E-coated ball joint housing for extreme rust resistance"
+        "Forged steel or aluminum body matches factory structural stiffness.",
+        "Natural rubber bushings isolate Noise, Vibration, and Harshness (NVH).",
+        "Premium ball joint with induction-hardened ball pins for smooth articulation.",
+        "Durable anti-corrosion black electrophoretic coating."
       ],
-      "specs": [
-        {
-          "label": "Fitting Position",
-          "value": "Front Axle, Upper Left / Right"
-        },
-        {
-          "label": "Material",
-          "value": "Forged Aluminum EN AW-6082"
-        },
-        {
-          "label": "Bushing Durometer",
-          "value": "70 Shore A HD"
-        }
-      ]
+      "specs": {
+        "Position": "Front Upper Left / Right",
+        "Body Material": "Forged Carbon Steel / Aluminum",
+        "Bushing Material": "High-density Natural Rubber",
+        "Salt Spray Rating": "240 hours minimum",
+        "Certification": "IATF 16949 Certified",
+        "Warranty": "1 Year B2B Sourcing"
+      },
+      "description": "Accurate wheel alignment and suspension articulation depend on a high-quality upper control arm. Manufactured to OEM specifications, STRAHL Upper Control Arms provide excellent durability, smooth handling, and enhanced steering precision."
     },
     {
       "id": 5,
@@ -334,24 +318,188 @@
       "image": "/images/product_5.jpg",
       "isBestSeller": false,
       "usps": [
-        "Structural steel pressings matching OEM tensile strength",
-        "Heavy-duty dust boot retaining ring for ball joint longevity",
-        "Engineered for precise alignment geometry retention"
+        "Heavy-wall structural steel tubing or forged alloy composition.",
+        "Hydraulic bushings pre-installed for superior driving comfort.",
+        "Ball joint boot made of high-grade chloroprene rubber for grease containment.",
+        "High fatigue strength under rough road conditions."
       ],
-      "specs": [
-        {
-          "label": "Fitting Position",
-          "value": "Front Axle Lower Rearward"
-        },
-        {
-          "label": "Coating",
-          "value": "Anti-corrosion Cataphoretic Dip Coating"
-        },
-        {
-          "label": "Torque Specs Included",
-          "value": "Yes, per OEM workshop manual"
-        }
-      ]
+      "specs": {
+        "Position": "Front Lower Left / Right",
+        "Body Material": "Structural Alloy Steel",
+        "Bushing Type": "Hydraulic / Solid Rubber",
+        "Boot Material": "Chloroprene Rubber",
+        "Certification": "IATF 16949 Certified",
+        "Warranty": "1 Year B2B Sourcing"
+      },
+      "description": "Engineered for strength and precision, the STRAHL Lower Control Arm maintains correct suspension geometry while improving steering stability and ride comfort. Premium bushings and precision ball joints help reduce vibration and ensure reliable performance over extended service life."
+    },
+    {
+      "id": 6,
+      "name": "Stabilizer Link",
+      "cat": "Suspension Components",
+      "sku": "ST-SL-8003",
+      "oeNumber": "31306767748 / 31306767749",
+      "image": "/images/product_6.jpg",
+      "isBestSeller": false,
+      "usps": [
+        "Optimized rod diameter resists high torsional sway forces.",
+        "Spherical joint inserts designed with low-friction POM bearings.",
+        "Dual dust-seals keep road grime and salt spray out of ball socket.",
+        "Threaded studs match original clamping specifications."
+      ],
+      "specs": {
+        "Position": "Front / Rear Sway Bar Link",
+        "Rod Material": "Reinforced Steel Rod",
+        "Joint Bearing": "Low-friction POM",
+        "Thread Type": "Metric Coarse Thread",
+        "Certification": "ISO 9001 Sourced",
+        "Warranty": "1 Year B2B Sourcing"
+      },
+      "description": "Vehicle stability during cornering relies on the effective transfer of force between the suspension and anti-roll bar. STRAHL Stabilizer Links are engineered with high-strength materials and precision ball joints to reduce body roll while enhancing handling and driving confidence."
+    },
+    {
+      "id": 7,
+      "name": "Tie Rod End",
+      "cat": "Steering",
+      "sku": "ST-TR-7001",
+      "oeNumber": "32216777503 / 32216763557",
+      "image": "/images/product_7.jpg",
+      "isBestSeller": false,
+      "usps": [
+        "Induction-hardened ball pins provide smooth steering and long wear life.",
+        "Internal high-performance synthetic grease reduces friction.",
+        "Coated threads resist seizing, allowing ease of wheel alignment.",
+        "Thick housing walls prevent steering play under impact loads."
+      ],
+      "specs": {
+        "Connection Type": "Threaded steering joint",
+        "Housing Material": "Forged Carbon Steel",
+        "Ball Stud Grade": "40Cr Steel alloy",
+        "Grease Type": "Synthetic chassis lubricant",
+        "Certification": "IATF 16949 Sourced",
+        "Warranty": "1 Year B2B Sourcing"
+      },
+      "description": "Smooth and responsive steering begins with precise steering linkage components. STRAHL Tie Rod Ends are manufactured to deliver accurate steering input, improved directional stability, and long-lasting reliability under demanding driving conditions."
+    },
+    {
+      "id": 8,
+      "name": "Steering Rack & Pinion",
+      "cat": "Steering",
+      "sku": "ST-SR-7002",
+      "oeNumber": "32106799217 / 32106799218",
+      "image": "/images/product_14.png",
+      "isBestSeller": false,
+      "usps": [
+        "Precision-machined helical pinion gear provides smooth, responsive steering.",
+        "Premium internal seals prevent hydraulic power steering fluid leakage.",
+        "Hardened steel guide bar and rack teeth resist heavy road impact.",
+        "Pre-installed premium rubber bellows protect internal rack gears."
+      ],
+      "specs": {
+        "Steering Type": "Hydraulic Power Steering Rack",
+        "Housing Material": "Die-cast Aluminum Alloy",
+        "Input Shaft Style": "Splined Shaft",
+        "Rack Stroke": "145 mm total travel",
+        "Certification": "IATF 16949 Sourced",
+        "Warranty": "1 Year B2B Sourcing"
+      },
+      "description": "Built for smooth articulation and dependable steering performance, STRAHL Steering Rack & Pinion units maintain accurate suspension movement while minimising wear. Precision-machined components and durable sealing ensure extended service life and reliable operation."
+    },
+    {
+      "id": 9,
+      "name": "AC Compressor",
+      "cat": "Climate Control Components",
+      "sku": "ST-ACC-6001",
+      "oeNumber": "4472601831 / 64526916232",
+      "image": "/images/product_8.jpg",
+      "isBestSeller": false,
+      "usps": [
+        "Precision swashplate design delivers variable displacement smooth cooling.",
+        "Built-in pressure relief valve and thermal control switches.",
+        "Pre-filled with correct volume of synthetic PAG oil.",
+        "High-grade electromagnetic clutch coil prevents slipping."
+      ],
+      "specs": {
+        "Displacement": "Variable / Fixed Displacement",
+        "Refrigerant Type": "R134a / R1234yf",
+        "Oil Type": "PAG 46 / PAG 100",
+        "Clutch Type": "Electromagnetic Multi-groove",
+        "Certification": "ISO 9001 Sourced",
+        "Warranty": "1 Year B2B Sourcing"
+      },
+      "description": "Efficient refrigerant compression is essential for consistent cabin comfort. STRAHL AC Compressors are manufactured with precision-engineered internal components to deliver quiet operation, excellent cooling performance, and reliable durability across varying operating conditions."
+    },
+    {
+      "id": 10,
+      "name": "AC Condenser",
+      "cat": "Climate Control Components",
+      "sku": "ST-ACD-6002",
+      "oeNumber": "64536914216 / 64536918953",
+      "image": "/images/product_9.jpg",
+      "isBestSeller": false,
+      "usps": [
+        "Micro-channel aluminum tubes maximize heat rejection rates.",
+        "Integrated receiver drier cartridge prevents moisture damage.",
+        "Fins feature salt-spray resistant anti-corrosion coating.",
+        "Mounting brackets align perfectly with vehicle radiator shroud."
+      ],
+      "specs": {
+        "Material": "Full Aluminum Brazed Core",
+        "Core Thickness": "16mm / 12mm optimized",
+        "Receiver Drier": "Integrated cartridge",
+        "Leak Tested": "100% helium leak test",
+        "Certification": "ISO 9001 Sourced",
+        "Warranty": "1 Year B2B Sourcing"
+      },
+      "description": "Optimized heat dissipation is the key to efficient air conditioning performance. STRAHL AC Condensers are constructed from corrosion-resistant aluminum and engineered to maximize thermal efficiency, ensuring dependable cooling even under demanding conditions."
+    },
+    {
+      "id": 11,
+      "name": "Cooling Coil / Evaporator",
+      "cat": "Climate Control Components",
+      "sku": "ST-EVP-6003",
+      "oeNumber": "64116913533 / 64116934390",
+      "image": "/images/product_10.jpg",
+      "isBestSeller": false,
+      "usps": [
+        "Highly efficient plate-fin core provides rapid cabin cooling.",
+        "Anti-bacterial coating prevents mold formation and odor.",
+        "Leak tested to strict high-pressure standards.",
+        "Engineered for direct fit in standard HVAC cases."
+      ],
+      "specs": {
+        "Core Style": "Plate-Fin Aluminum Evaporator",
+        "Core Depth": "38mm / 44mm direct fit",
+        "Coating": "Hydrophilic and anti-microbial",
+        "Inlet/Outlet": "O-ring block connections",
+        "Certification": "ISO 9001 Sourced",
+        "Warranty": "1 Year B2B Sourcing"
+      },
+      "description": "Effective cabin cooling begins with efficient heat absorption. STRAHL Evaporators feature precision-engineered aluminum cores that maximize thermal efficiency while providing rapid cooling and improved humidity control for enhanced passenger comfort."
+    },
+    {
+      "id": 12,
+      "name": "Expansion Valve",
+      "cat": "Climate Control Components",
+      "sku": "ST-EXV-6004",
+      "oeNumber": "64116913477 / 64116935441",
+      "image": "/images/product_11.jpg",
+      "isBestSeller": false,
+      "usps": [
+        "Precision thermal charge element guarantees accurate flow control.",
+        "Spring-loaded internal metering valve maintains steady superheat levels.",
+        "Solid brass or aluminum body resists high operating pressures.",
+        "High reliability prevents evaporator freezing."
+      ],
+      "specs": {
+        "Valve Style": "Block Type Expansion Valve",
+        "Material": "High-grade Extruded Aluminum",
+        "Superheat Setting": "OEM calibrated",
+        "Fitting Type": "O-ring flange mounting",
+        "Certification": "ISO 9001 Sourced",
+        "Warranty": "1 Year B2B Sourcing"
+      },
+      "description": "Accurate refrigerant flow control plays a vital role in air conditioning efficiency. STRAHL Expansion Valves precisely regulate refrigerant entering the evaporator, maintaining optimal pressure and temperature for reliable and consistent cooling performance."
     }
   ],
   "quality": {

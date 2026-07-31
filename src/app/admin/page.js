@@ -1111,11 +1111,23 @@ function LeadCard({ lead, onUpdateStatus }) {
         <div>
           <span style={{ fontSize: "11px", textTransform: "uppercase", color: "#38BDF8", fontWeight: "700" }}>Contact Details</span>
           <p style={{ fontSize: "13px", color: "#ffffff", margin: "4px 0 2px 0" }}>Email: <a href={`mailto:${lead.email}`} style={{ color: "#38BDF8" }}>{lead.email}</a></p>
-          <p style={{ fontSize: "13px", color: "#ffffff", margin: 0 }}>Phone: <a href={`tel:${lead.phone}`} style={{ color: "#38BDF8" }}>{lead.phone}</a></p>
+          <p style={{ fontSize: "13px", color: "#ffffff", margin: "2px 0 2px 0" }}>Phone: <a href={`tel:${lead.phone}`} style={{ color: "#38BDF8" }}>{lead.phone}</a></p>
+          {lead.company && <p style={{ fontSize: "13px", color: "#ffffff", margin: "2px 0 0 0" }}>Company: {lead.company}</p>}
         </div>
         <div>
-          <span style={{ fontSize: "11px", textTransform: "uppercase", color: "#38BDF8", fontWeight: "700" }}>Inquiry Message</span>
-          <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.85)", margin: "4px 0 0 0", lineHeight: "1.5" }}>{lead.message}</p>
+          <span style={{ fontSize: "11px", textTransform: "uppercase", color: "#38BDF8", fontWeight: "700" }}>Enquiry Details</span>
+          {lead.message && lead.message.startsWith("Product Enquiry:") ? (
+            <div style={{ marginTop: "6px" }}>
+              <span style={{ fontSize: "10px", fontWeight: "700", textTransform: "uppercase", color: "#10B981", background: "rgba(16,185,129,0.12)", border: "1px solid rgba(16,185,129,0.3)", borderRadius: "6px", padding: "3px 8px", display: "inline-block", marginBottom: "6px" }}>
+                Product Enquiry
+              </span>
+              <p style={{ fontSize: "14px", color: "#ffffff", fontWeight: "600", margin: "0", lineHeight: "1.4" }}>
+                {lead.message.replace("Product Enquiry: ", "")}
+              </p>
+            </div>
+          ) : (
+            <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.85)", margin: "4px 0 0 0", lineHeight: "1.5" }}>{lead.message}</p>
+          )}
         </div>
       </div>
 

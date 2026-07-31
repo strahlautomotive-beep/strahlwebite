@@ -31,6 +31,7 @@ function ContactFormInner() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // 1. Save lead to admin database
     try {
       await fetch("/api/leads", {
         method: "POST",
@@ -40,6 +41,14 @@ function ContactFormInner() {
     } catch (err) {
       console.error("Error submitting inquiry:", err);
     }
+
+    // 2. Open user's email client pre-filled with enquiry details
+    const subject = encodeURIComponent(`Commercial Enquiry: ${formData.inquiryType.toUpperCase()} - ${formData.company || formData.name}`);
+    const body = encodeURIComponent(
+      `Hi STRAHL Team,\n\nI would like to submit a commercial enquiry.\n\nDetails:\n- Name: ${formData.name}\n- Company: ${formData.company}\n- Email: ${formData.email}\n- Phone: ${formData.phone}\n- Inquiry Type: ${formData.inquiryType}\n- Product Segment: ${formData.productInterest}\n\nMessage:\n${formData.message}\n\nThank you.`
+    );
+    window.location.href = `mailto:sales@strahl.in?subject=${subject}&body=${body}`;
+
     setSubmitted(true);
   };
 
@@ -167,11 +176,7 @@ function ContactFormInner() {
           </div>
 
           <button type="submit" className="form-submit-btn">
-            Submit B2B Inquiry
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: "4px" }}>
-              <line x1="22" y1="2" x2="11" y2="13"></line>
-              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-            </svg>
+            ✉ Send Enquiry via Email
           </button>
         </form>
       )}
@@ -183,81 +188,15 @@ export default function ContactPage() {
   return (
     <main className="sec">
       {/* HEADER */}
-      <div style={{ textAlign: "center", marginBottom: "60px" }}>
+      <div style={{ textAlign: "center", marginBottom: "40px" }}>
         <span className="sec-eyebrow">Reach us</span>
-        <h1 className="sec-title">Contact Sales &amp; Distribution</h1>
+        <h1 className="sec-title">Enquiry</h1>
         <p className="sec-sub" style={{ margin: "0 auto", color: "#000000", fontWeight: "400" }}>
           Get in touch with our commercial desks regarding custom orders, technical specifications, and dealership accounts.
         </p>
       </div>
 
-      <div className="contact-grid">
-        {/* DIRECT INFORMATION */}
-        <div className="c-info">
-          <div className="c-item">
-            <div className="c-ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-            </div>
-            <div>
-              <div className="c-lbl">Registered Address</div>
-              <div className="c-val">
-                Tamilnadu, India
-                <div style={{ color: "var(--text-muted)", fontSize: "12px", marginTop: "4px" }}>
-                  STRAHL™ — A Brand of Imperion Global Trade
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="c-item">
-            <div className="c-ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-            </div>
-            <div>
-              <div className="c-lbl">Email Address</div>
-              <div className="c-val">
-                <a href="mailto:sales@strahl.in">sales@strahl.in</a>
-              </div>
-            </div>
-          </div>
-
-          <div className="c-item">
-            <div className="c-ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <line x1="2" y1="12" x2="22" y2="12"/>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-              </svg>
-            </div>
-            <div>
-              <div className="c-lbl">Official Portal</div>
-              <div className="c-val">
-                <a href="https://www.strahl.in" target="_blank" rel="noopener noreferrer">www.strahl.in</a>
-              </div>
-            </div>
-          </div>
-
-          <div className="c-item">
-            <div className="c-ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.4 16z"/>
-              </svg>
-            </div>
-            <div>
-              <div className="c-lbl">Commercial Helpdesk</div>
-              <div className="c-val">
-                +91 XXXXX XXXXX
-              </div>
-            </div>
-          </div>
-        </div>
-
+      <div style={{ maxWidth: "800px", margin: "0 auto" }}>
         {/* SUSPENSE BOUNDARY WRAPPED FORM */}
         <Suspense fallback={<div style={{ color: "var(--text-muted)" }}>Loading Inquiry Form...</div>}>
           <ContactFormInner />

@@ -175,7 +175,7 @@ export const initialContent = {
   products: [
     {
       id: 1,
-      name: "Air Suspension Strut",
+      name: "Airmatic Shock Absorber",
       cat: "Air Suspension System",
       sku: "ST-AS-9001",
       oeNumber: "4Z7616051A / 2203202438",
@@ -190,7 +190,7 @@ export const initialContent = {
     },
     {
       id: 2,
-      name: "Air Suspension Compressor",
+      name: "Airmatic Compressor",
       cat: "Air Suspension System",
       sku: "ST-AC-9002",
       oeNumber: "2113200304 / 4E0616007D",
@@ -205,7 +205,7 @@ export const initialContent = {
     },
     {
       id: 3,
-      name: "Valve Block",
+      name: "Airmatic Valve Block",
       cat: "Air Suspension System",
       sku: "ST-VB-9003",
       oeNumber: "2123200358 / 4F0616013",
@@ -246,6 +246,141 @@ export const initialContent = {
         { label: "Fitting Position", value: "Front Axle Lower Rearward" },
         { label: "Coating", value: "Anti-corrosion Cataphoretic Dip Coating" },
         { label: "Torque Specs Included", value: "Yes, per OEM workshop manual" }
+      ]
+    },
+    {
+      id: 6,
+      name: "Stabilizer Link",
+      cat: "Suspension Components",
+      sku: "ST-SL-8003",
+      oeNumber: "31306767748 / 31306767749",
+      image: "/images/product_6.jpg",
+      isBestSeller: false,
+      usps: ["Optimized rod diameter resists high torsional sway forces", "Spherical joint inserts with low-friction POM bearings", "Dual dust-seals keep road grime and salt spray out of ball socket"],
+      specs: [
+        { label: "Position", value: "Front / Rear Sway Bar Link" },
+        { label: "Rod Material", value: "Reinforced Steel Rod" },
+        { label: "Warranty", value: "1 Year B2B Sourcing" }
+      ]
+    },
+    {
+      id: 7,
+      name: "Tie Rod End",
+      cat: "Steering",
+      sku: "ST-TR-7001",
+      oeNumber: "32216777503 / 32216763557",
+      image: "/images/product_7.jpg",
+      isBestSeller: false,
+      usps: ["Induction-hardened ball pins for smooth steering and long wear life", "Internal synthetic grease reduces friction", "Coated threads resist seizing for ease of wheel alignment"],
+      specs: [
+        { label: "Connection Type", value: "Threaded steering joint" },
+        { label: "Housing Material", value: "Forged Carbon Steel" },
+        { label: "Warranty", value: "1 Year B2B Sourcing" }
+      ]
+    },
+    {
+      id: 8,
+      name: "Steering Rack & Pinion",
+      cat: "Steering",
+      sku: "ST-SR-7002",
+      oeNumber: "32106799217 / 32106799218",
+      image: "/images/product_14.png",
+      isBestSeller: false,
+      usps: ["Precision-machined helical pinion gear for smooth responsive steering", "Premium internal seals prevent hydraulic fluid leakage", "Pre-installed rubber bellows protect internal rack gears"],
+      specs: [
+        { label: "Steering Type", value: "Hydraulic Power Steering Rack" },
+        { label: "Housing Material", value: "Die-cast Aluminum Alloy" },
+        { label: "Warranty", value: "1 Year B2B Sourcing" }
+      ]
+    },
+    {
+      id: 9,
+      name: "AC Compressor",
+      cat: "Climate Control Components",
+      sku: "ST-ACC-6001",
+      oeNumber: "4472601831 / 64526916232",
+      image: "/images/product_8.jpg",
+      isBestSeller: false,
+      usps: ["Precision swashplate design delivers variable displacement smooth cooling", "Pre-filled with correct volume of synthetic PAG oil", "High-grade electromagnetic clutch coil prevents slipping"],
+      specs: [
+        { label: "Refrigerant Type", value: "R134a / R1234yf" },
+        { label: "Oil Type", value: "PAG 46 / PAG 100" },
+        { label: "Warranty", value: "1 Year B2B Sourcing" }
+      ]
+    },
+    {
+      id: 10,
+      name: "AC Condenser",
+      cat: "Climate Control Components",
+      sku: "ST-ACD-6002",
+      oeNumber: "64536914216 / 64536918953",
+      image: "/images/product_9.jpg",
+      isBestSeller: false,
+      usps: ["Micro-channel aluminum tubes maximize heat rejection rates", "Integrated receiver drier cartridge prevents moisture damage", "100% helium leak tested before dispatch"],
+      specs: [
+        { label: "Material", value: "Full Aluminum Brazed Core" },
+        { label: "Receiver Drier", value: "Integrated cartridge" },
+        { label: "Warranty", value: "1 Year B2B Sourcing" }
+      ]
+    },
+    {
+      id: 11,
+      name: "Cooling Coil / Evaporator",
+      cat: "Climate Control Components",
+      sku: "ST-EVP-6003",
+      oeNumber: "64116913533 / 64116934390",
+      image: "/images/product_10.jpg",
+      isBestSeller: false,
+      usps: ["Highly efficient plate-fin core provides rapid cabin cooling", "Anti-bacterial coating prevents mold formation and odor", "Engineered for direct fit in standard HVAC cases"],
+      specs: [
+        { label: "Core Style", value: "Plate-Fin Aluminum Evaporator" },
+        { label: "Coating", value: "Hydrophilic and anti-microbial" },
+        { label: "Warranty", value: "1 Year B2B Sourcing" }
+      ]
+    },
+    {
+      id: 12,
+      name: "Expansion Valve",
+      cat: "Climate Control Components",
+      sku: "ST-EXV-6004",
+      oeNumber: "64116913477 / 64116935441",
+      image: "/images/product_11.jpg",
+      isBestSeller: false,
+      usps: ["Precision thermal charge element guarantees accurate flow control", "Spring-loaded metering valve maintains steady superheat levels", "Solid aluminum body resists high operating pressures"],
+      specs: [
+        { label: "Valve Style", value: "Block Type Expansion Valve" },
+        { label: "Material", value: "High-grade Extruded Aluminum" },
+        { label: "Warranty", value: "1 Year B2B Sourcing" }
+      ]
+    },
+    {
+      id: 13,
+      name: "Hydraulic Engine Mount",
+      cat: "Engine Mounts",
+      sku: "ST-EM-5001",
+      oeNumber: "22116857091 / 22116857092",
+      image: "/images/product_12.png",
+      isBestSeller: false,
+      usps: ["Hydraulic fluid-filled chamber dampens low-frequency engine vibrations", "Premium natural rubber compounding isolates high-frequency NVH", "Individually tested for hydraulic pressure seal integrity"],
+      specs: [
+        { label: "Mount Type", value: "Hydraulic (Fluid-Filled)" },
+        { label: "Material", value: "Natural Rubber & Steel Alloy" },
+        { label: "Warranty", value: "1 Year B2B Sourcing" }
+      ]
+    },
+    {
+      id: 14,
+      name: "Transmission Mount",
+      cat: "Engine Mounts",
+      sku: "ST-TM-5002",
+      oeNumber: "22316855045 / 22316855046",
+      image: "/images/product_13.png",
+      isBestSeller: false,
+      usps: ["Specially formulated elastomer compound maintains drivetrain alignment", "Controls engine and transmission rocking during gear shifts", "High-grade zinc plating resists corrosion under road debris impact"],
+      specs: [
+        { label: "Mount Type", value: "Solid Elastomer / Rubber-Metal" },
+        { label: "Hardness", value: "60 Shore A Durometer" },
+        { label: "Warranty", value: "1 Year B2B Sourcing" }
       ]
     }
   ],
