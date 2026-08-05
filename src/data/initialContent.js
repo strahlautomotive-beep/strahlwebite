@@ -5,7 +5,7 @@ export const initialContent = {
       title: "OE Replacement Components",
       subtext: "For European Passenger Cars & SUVs",
       desc: "Delivering precision-engineered suspension, steering, and climate control components built to stringent original equipment specifications for distributors and workshops worldwide.",
-      ctaPrimaryText: "EXPLORE B2B PRODUCTS",
+      ctaPrimaryText: "EXPLORE PRODUCTS",
       ctaPrimaryLink: "/products",
       ctaSecondaryText: "BECOME A DISTRIBUTOR",
       ctaSecondaryLink: "/partner",
@@ -266,7 +266,7 @@ export const initialContent = {
     {
       id: 7,
       name: "Tie Rod End",
-      cat: "Steering",
+      cat: "Steering Components",
       sku: "ST-TR-7001",
       oeNumber: "32216777503 / 32216763557",
       image: "/images/product_7.jpg",
@@ -280,8 +280,8 @@ export const initialContent = {
     },
     {
       id: 8,
-      name: "Steering Rack & Pinion",
-      cat: "Steering",
+      name: "Steering Ball Joint",
+      cat: "Steering Components",
       sku: "ST-SR-7002",
       oeNumber: "32106799217 / 32106799218",
       image: "/images/product_14.png",

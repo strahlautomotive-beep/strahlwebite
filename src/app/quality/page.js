@@ -120,32 +120,32 @@ export default function QualityPage() {
         }}>
           {[
             {
-              phase: "Phase 01",
+              icon: <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>,
               title: "Material Verification",
               desc: "Chemical composition and material properties are verified where applicable to ensure consistency with defined specifications."
             },
             {
-              phase: "Phase 02",
+              icon: <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>,
               title: "Corrosion Resistance",
               desc: "Components intended for harsh operating environments are evaluated for corrosion resistance using recognized test methods."
             },
             {
-              phase: "Phase 03",
+              icon: <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>,
               title: "Fatigue Testing",
               desc: "Applicable suspension and steering components are assessed for durability under repeated loading conditions."
             },
             {
-              phase: "Phase 04",
+              icon: <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="9" width="20" height="6" rx="2"></rect><path d="M6 15v2M10 15v2M14 15v2M18 15v2"></path></svg>,
               title: "Dimensional Inspection",
               desc: "Critical dimensions are verified using precision measuring equipment to support accurate fitment."
             },
             {
-              phase: "Phase 05",
+              icon: <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 12a4 4 0 0 1 8 0"></path></svg>,
               title: "Elastomer Evaluation",
               desc: "Rubber components are evaluated for hardness, elasticity, and durability where applicable."
             },
             {
-              phase: "Phase 06",
+              icon: <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>,
               title: "Leak Testing",
               desc: "Pressurized and sealed components undergo leak testing appropriate to their application."
             }
@@ -158,20 +158,19 @@ export default function QualityPage() {
               boxShadow: "0 4px 12px rgba(0,0,0,0.03)",
               transition: "transform 0.2s ease, box-shadow 0.2s ease"
             }}>
-              <span style={{
-                display: "inline-block",
-                padding: "4px 10px",
-                fontSize: "11px",
-                fontWeight: "700",
-                color: "#2563EB",
+              <div style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "44px",
+                height: "44px",
                 background: "#eff6ff",
-                borderRadius: "20px",
-                marginBottom: "12px",
-                textTransform: "uppercase",
-                letterSpacing: "0.5px"
+                color: "#2563EB",
+                borderRadius: "10px",
+                marginBottom: "16px"
               }}>
-                {item.phase}
-              </span>
+                {item.icon}
+              </div>
               <h3 style={{ fontSize: "17px", fontWeight: "700", color: "#0f172a", marginBottom: "10px", fontFamily: "var(--fd, sans-serif)" }}>
                 {item.title}
               </h3>

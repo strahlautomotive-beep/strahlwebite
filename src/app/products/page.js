@@ -136,7 +136,7 @@ const PRODUCTS_DATA = [
   {
     id: "tie-rod-end",
     name: "Tie Rod End",
-    cat: "Steering",
+    cat: "Steering Components",
     image: "/images/product_7.jpg",
     description: "Smooth and responsive steering begins with precise steering linkage components. STRAHL Tie Rod Ends are manufactured to deliver accurate steering input, improved directional stability, and long-lasting reliability under demanding driving conditions.",
     usps: [
@@ -156,10 +156,10 @@ const PRODUCTS_DATA = [
   },
   {
     id: "steering-rack-pinion",
-    name: "Steering Rack & Pinion",
-    cat: "Steering",
+    name: "Steering Ball Joint",
+    cat: "Steering Components",
     image: "/images/product_14.png",
-    description: "Built for smooth articulation and dependable steering performance, STRAHL Steering Rack & Pinion units maintain accurate suspension movement while minimising wear. Precision-machined components and durable sealing ensure extended service life and reliable operation.",
+    description: "Built for smooth articulation and dependable steering performance, STRAHL Steering Ball Joint units maintain accurate suspension movement while minimising wear. Precision-machined components and durable sealing ensure extended service life and reliable operation.",
     usps: [
       "Precision-machined helical pinion gear provides smooth, responsive steering.",
       "Premium internal seals prevent hydraulic power steering fluid leakage.",
@@ -417,7 +417,7 @@ function ProductDetailModal({ product, onClose }) {
                 className="modal-cta-btn"
                 style={{ width: "100%", border: "none", padding: "16px 24px", fontSize: "15px", fontWeight: "700", marginTop: "8px" }}
               >
-                Enquiry Now
+                ENQUIRE NOW
               </button>
             </div>
           </div>
@@ -453,7 +453,7 @@ export default function ProductsPage() {
       .catch((err) => console.log("Using PRODUCTS_DATA fallback:", err));
   }, []);
 
-  const categories = ["All", "Air Suspension System", "Suspension Components", "Steering", "Climate Control Components"];
+  const categories = ["All", "Air Suspension System", "Suspension Components", "Steering Components", "Climate Control Components"];
 
   const filteredProducts = activeCategory === "All"
     ? productsList
@@ -464,7 +464,7 @@ export default function ProductsPage() {
       {/* HEADER */}
       <div style={{ textAlign: "center", marginBottom: "50px" }}>
         <span className="sec-eyebrow">PRODUCT CATALOG</span>
-        <h1 className="sec-title">Sourcing Portfolio – Built for Every Mile</h1>
+        <h1 className="sec-title">Built for Every Mile</h1>
         <p className="sec-sub" style={{ margin: "0 auto", color: "#000000", fontWeight: "400" }}>
           A comprehensive range of automotive components designed to meet the evolving demands of today&apos;s aftermarket.
         </p>

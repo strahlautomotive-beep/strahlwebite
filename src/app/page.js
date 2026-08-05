@@ -76,8 +76,8 @@ export default function Home() {
     { id: "upper-control-arm", name: "Upper Control Arm", cat: "Suspension", image: "/images/product_4.jpg" },
     { id: "lower-control-arm", name: "Lower Control Arm", cat: "Suspension", image: "/images/product_5.jpg" },
     { id: "stabilizer-link", name: "Stabilizer Link", cat: "Suspension", image: "/images/product_6.jpg" },
-    { id: "tie-rod-end", name: "Tie Rod End", cat: "Steering", image: "/images/product_7.jpg" },
-    { id: "steering-rack-pinion", name: "Steering Rack & Pinion", cat: "Steering", image: "/images/product_14.png" },
+    { id: "tie-rod-end", name: "Tie Rod End", cat: "Steering Components", image: "/images/product_7.jpg" },
+    { id: "steering-rack-pinion", name: "Steering Ball Joint", cat: "Steering Components", image: "/images/product_14.png" },
     { id: "hydraulic-engine-mount", name: "Hydraulic Engine Mount", cat: "Engine Mounts", image: "/images/product_12.png" },
     { id: "transmission-mount", name: "Transmission Mount", cat: "Engine Mounts", image: "/images/product_13.png" },
     { id: "ac-compressor", name: "AC Compressor", cat: "AC System", image: "/images/product_8.jpg" },
@@ -237,16 +237,16 @@ export default function Home() {
             </div>
             
             <h1 className="hero-title" style={{ fontSize: "clamp(38px, 6vw, 68px)", marginBottom: "24px", color: "#ffffff" }}>
-              Premiun OE Replacement Parts
+              Premium OE Replacement Parts
             </h1>
             
             <p className="hero-sub" style={{ fontSize: "19px", color: "rgba(255, 255, 255, 0.9)", maxWidth: "760px", marginBottom: "40px" }}>
-              STRAHL is a trusted supplier of premium OE replacement components for European vehicles. Our suspension, steering, air suspension, and climate control solutions are engineered to deliver reliable fitment, durability, and consistent performance.
+              STRAHL is a trusted supplier of premium OE replacement components for European vehicles. Our suspension, steering, and climate control solutions are engineered to deliver reliable fitment, durability, and consistent performance.
             </p>
             
             <div className="hero-btns" style={{ justifyContent: "center", marginBottom: "20px" }}>
               <Link href="/products" className="btn-p">
-                Explore B2B Products
+                EXPLORE PRODUCTS
               </Link>
               <Link href="/partner" className="btn-o">
                 Become a Distributor

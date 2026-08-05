@@ -51,7 +51,7 @@ export default function Footer() {
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", alignItems: "center" }}>
               <a 
-                href="#" 
+                href="/" 
                 aria-label="Facebook" 
                 style={{ 
                   display: "flex", 
@@ -75,7 +75,7 @@ export default function Footer() {
               </a>
 
               <a 
-                href="#" 
+                href="/" 
                 aria-label="Instagram" 
                 style={{ 
                   display: "flex", 
@@ -99,7 +99,7 @@ export default function Footer() {
               </a>
 
               <a 
-                href="#" 
+                href="/" 
                 aria-label="LinkedIn" 
                 style={{ 
                   display: "flex", 
@@ -123,7 +123,7 @@ export default function Footer() {
               </a>
 
               <a 
-                href="#" 
+                href="/" 
                 aria-label="YouTube" 
                 style={{ 
                   display: "flex", 
