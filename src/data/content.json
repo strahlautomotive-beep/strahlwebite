@@ -52,10 +52,9 @@
         "title": "Air Suspension System",
         "desc": "Air struts, air springs, valve blocks, and high-pressure compressor units.",
         "items": [
-          "Air Suspension Strut",
-          "Air Suspension Compressor",
-          "Valve Block",
-          "Air Spring Bag"
+          "Airmatic Shock Absorbers",
+          "Airmatic Compressors",
+          "Airmatic Valve Blocks"
         ],
         "icon": "air-suspension",
         "link": "/products"
@@ -65,10 +64,9 @@
         "title": "Suspension Components",
         "desc": "Control arms, ball joints, tie rod ends, and stabilizer link bars.",
         "items": [
-          "Upper Control Arm",
-          "Lower Control Arm",
-          "Control Arm Bushing",
-          "Ball Joint"
+          "Lower Arms",
+          "Upper Arms",
+          "Stabilizer Links"
         ],
         "icon": "suspension",
         "link": "/products"
@@ -78,10 +76,8 @@
         "title": "Steering Components",
         "desc": "Precision steering racks, tie rods, power steering pumps, and column shafts.",
         "items": [
-          "Steering Rack",
-          "Tie Rod End",
-          "Power Steering Pump",
-          "Axle Joint"
+          "Tie Rod Ends",
+          "Steering Ball Joints"
         ],
         "icon": "steering",
         "link": "/products"
@@ -91,10 +87,10 @@
         "title": "Climate Control Components",
         "desc": "A/C compressors, blower motors, condensers, and expansion valves.",
         "items": [
-          "A/C Compressor",
-          "Blower Motor",
-          "Condenser",
-          "Expansion Valve"
+          "AC Compressors",
+          "AC Condensers",
+          "Evaporators / Cooling Coils",
+          "Expansion Valves"
         ],
         "icon": "climate-control",
         "link": "/products"
@@ -383,7 +379,7 @@
     },
     {
       "id": 8,
-      "name": "Steering Ball Joint",
+      "name": "Steering Rack",
       "cat": "Steering Components",
       "sku": "ST-SR-7002",
       "oeNumber": "32106799217 / 32106799218",
@@ -403,7 +399,7 @@
         "Certification": "IATF 16949 Sourced",
         "Warranty": "1 Year B2B Sourcing"
       },
-      "description": "Built for smooth articulation and dependable steering performance, STRAHL Steering Ball Joint units maintain accurate suspension movement while minimising wear. Precision-machined components and durable sealing ensure extended service life and reliable operation."
+      "description": "Built for smooth articulation and dependable steering performance, STRAHL Steering Rack units maintain accurate suspension movement while minimising wear. Precision-machined components and durable sealing ensure extended service life and reliable operation."
     },
     {
       "id": 9,

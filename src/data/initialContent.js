@@ -33,7 +33,7 @@ export const initialContent = {
         id: "air-suspension",
         title: "Air Suspension System",
         desc: "Air struts, air springs, valve blocks, and high-pressure compressor units.",
-        items: ["Air Suspension Strut", "Air Suspension Compressor", "Valve Block", "Air Spring Bag"],
+        items: ["Airmatic Shock Absorbers", "Airmatic Compressors", "Airmatic Valve Blocks"],
         icon: "air-suspension",
         link: "/products"
       },
@@ -41,7 +41,7 @@ export const initialContent = {
         id: "suspension",
         title: "Suspension Components",
         desc: "Control arms, ball joints, tie rod ends, and stabilizer link bars.",
-        items: ["Upper Control Arm", "Lower Control Arm", "Control Arm Bushing", "Ball Joint"],
+        items: ["Lower Arms", "Upper Arms", "Stabilizer Links"],
         icon: "suspension",
         link: "/products"
       },
@@ -49,7 +49,7 @@ export const initialContent = {
         id: "steering",
         title: "Steering Components",
         desc: "Precision steering racks, tie rods, power steering pumps, and column shafts.",
-        items: ["Steering Rack", "Tie Rod End", "Power Steering Pump", "Axle Joint"],
+        items: ["Tie Rod Ends", "Steering Ball Joints"],
         icon: "steering",
         link: "/products"
       },
@@ -57,7 +57,7 @@ export const initialContent = {
         id: "climate-control",
         title: "Climate Control Components",
         desc: "A/C compressors, blower motors, condensers, and expansion valves.",
-        items: ["A/C Compressor", "Blower Motor", "Condenser", "Expansion Valve"],
+        items: ["AC Compressors", "AC Condensers", "Evaporators / Cooling Coils", "Expansion Valves"],
         icon: "climate-control",
         link: "/products"
       }
@@ -280,7 +280,7 @@ export const initialContent = {
     },
     {
       id: 8,
-      name: "Steering Ball Joint",
+      name: "Steering Rack",
       cat: "Steering Components",
       sku: "ST-SR-7002",
       oeNumber: "32106799217 / 32106799218",
@@ -353,36 +353,6 @@ export const initialContent = {
         { label: "Warranty", value: "1 Year B2B Sourcing" }
       ]
     },
-    {
-      id: 13,
-      name: "Hydraulic Engine Mount",
-      cat: "Engine Mounts",
-      sku: "ST-EM-5001",
-      oeNumber: "22116857091 / 22116857092",
-      image: "/images/product_12.png",
-      isBestSeller: false,
-      usps: ["Hydraulic fluid-filled chamber dampens low-frequency engine vibrations", "Premium natural rubber compounding isolates high-frequency NVH", "Individually tested for hydraulic pressure seal integrity"],
-      specs: [
-        { label: "Mount Type", value: "Hydraulic (Fluid-Filled)" },
-        { label: "Material", value: "Natural Rubber & Steel Alloy" },
-        { label: "Warranty", value: "1 Year B2B Sourcing" }
-      ]
-    },
-    {
-      id: 14,
-      name: "Transmission Mount",
-      cat: "Engine Mounts",
-      sku: "ST-TM-5002",
-      oeNumber: "22316855045 / 22316855046",
-      image: "/images/product_13.png",
-      isBestSeller: false,
-      usps: ["Specially formulated elastomer compound maintains drivetrain alignment", "Controls engine and transmission rocking during gear shifts", "High-grade zinc plating resists corrosion under road debris impact"],
-      specs: [
-        { label: "Mount Type", value: "Solid Elastomer / Rubber-Metal" },
-        { label: "Hardness", value: "60 Shore A Durometer" },
-        { label: "Warranty", value: "1 Year B2B Sourcing" }
-      ]
-    }
   ],
 
   quality: {

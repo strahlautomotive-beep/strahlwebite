@@ -70,20 +70,16 @@ export default function Home() {
 
   // Slider products comprising all 11 original items plus the 3 new ones
   const sliderProducts = [
-    { id: "air-suspension-strut", name: "Air Suspension Strut", cat: "Air Suspension", image: "/images/product_1.jpg", isBestSeller: true },
-    { id: "air-suspension-compressor", name: "Air Suspension Compressor", cat: "Air Suspension", image: "/images/product_2.jpg" },
-    { id: "valve-block", name: "Valve Block", cat: "Air Suspension", image: "/images/product_3.jpg" },
-    { id: "upper-control-arm", name: "Upper Control Arm", cat: "Suspension", image: "/images/product_4.jpg" },
-    { id: "lower-control-arm", name: "Lower Control Arm", cat: "Suspension", image: "/images/product_5.jpg" },
-    { id: "stabilizer-link", name: "Stabilizer Link", cat: "Suspension", image: "/images/product_6.jpg" },
+    { id: "air-suspension-strut", name: "Airmatic Shock Absorber", cat: "Air Suspension System", image: "/images/product_1.jpg", isBestSeller: true },
+    { id: "air-suspension-compressor", name: "Airmatic Compressor", cat: "Air Suspension System", image: "/images/product_2.jpg" },
+    { id: "upper-control-arm", name: "Upper Control Arm", cat: "Suspension Components", image: "/images/product_4.jpg" },
+    { id: "lower-control-arm", name: "Lower Control Arm", cat: "Suspension Components", image: "/images/product_5.jpg" },
+    { id: "stabilizer-link", name: "Stabilizer Link", cat: "Suspension Components", image: "/images/product_6.jpg" },
     { id: "tie-rod-end", name: "Tie Rod End", cat: "Steering Components", image: "/images/product_7.jpg" },
     { id: "steering-rack-pinion", name: "Steering Ball Joint", cat: "Steering Components", image: "/images/product_14.png" },
-    { id: "hydraulic-engine-mount", name: "Hydraulic Engine Mount", cat: "Engine Mounts", image: "/images/product_12.png" },
-    { id: "transmission-mount", name: "Transmission Mount", cat: "Engine Mounts", image: "/images/product_13.png" },
-    { id: "ac-compressor", name: "AC Compressor", cat: "AC System", image: "/images/product_8.jpg" },
-    { id: "ac-condenser", name: "AC Condenser", cat: "AC System", image: "/images/product_9.jpg" },
-    { id: "cooling-coil-evaporator", name: "Cooling Coil / Evaporator", cat: "AC System", image: "/images/product_10.jpg" },
-    { id: "expansion-valve", name: "Expansion Valve", cat: "AC System", image: "/images/product_11.jpg" }
+    { id: "ac-compressor", name: "AC Compressor", cat: "Climate Control Components", image: "/images/product_8.jpg" },
+    { id: "ac-condenser", name: "AC Condenser", cat: "Climate Control Components", image: "/images/product_9.jpg" },
+    { id: "expansion-valve", name: "Expansion Valve", cat: "Climate Control Components", image: "/images/product_11.jpg" }
   ];
 
   // Starts with Air Suspension Strut (index 0) active in the center
@@ -489,7 +485,7 @@ export default function Home() {
                   <div className="cat-thumb-img">
                     <Image src="/images/product_14.png" alt="Steering Ball Joint" fill style={{ objectFit: "cover" }} />
                   </div>
-                  <span className="cat-thumb-name">Ball Joint</span>
+                  <span className="cat-thumb-name">Steering Ball Joint</span>
                 </Link>
               </div>
             </div>
