@@ -156,10 +156,10 @@ const PRODUCTS_DATA = [
   },
   {
     id: "steering-rack-pinion",
-    name: "Steering Rack",
+    name: "Steering Ball Joint",
     cat: "Steering Components",
     image: "/images/product_14.png",
-    description: "Built for smooth articulation and dependable steering performance, STRAHL Steering Rack units maintain accurate suspension movement while minimising wear. Precision-machined components and durable sealing ensure extended service life and reliable operation.",
+    description: "Built for smooth articulation and dependable steering performance, STRAHL Steering Ball Joint units maintain accurate suspension movement while minimising wear. Precision-machined components and durable sealing ensure extended service life and reliable operation.",
     usps: [
       "Precision-machined helical pinion gear provides smooth, responsive steering.",
       "Premium internal seals prevent hydraulic power steering fluid leakage.",
@@ -167,7 +167,7 @@ const PRODUCTS_DATA = [
       "Pre-installed premium rubber bellows protect internal rack gears."
     ],
     specs: {
-      "Steering Type": "Hydraulic Power Steering Rack",
+      "Steering Type": "Hydraulic Power Steering Ball Joint",
       "Housing Material": "Die-cast Aluminum Alloy",
       "Input Shaft Style": "Splined Shaft",
       "Rack Stroke": "145 mm total travel",

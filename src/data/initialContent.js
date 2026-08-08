@@ -280,7 +280,7 @@ export const initialContent = {
     },
     {
       id: 8,
-      name: "Steering Rack",
+      name: "Steering Ball Joint",
       cat: "Steering Components",
       sku: "ST-SR-7002",
       oeNumber: "32106799217 / 32106799218",
@@ -288,7 +288,7 @@ export const initialContent = {
       isBestSeller: false,
       usps: ["Precision-machined helical pinion gear for smooth responsive steering", "Premium internal seals prevent hydraulic fluid leakage", "Pre-installed rubber bellows protect internal rack gears"],
       specs: [
-        { label: "Steering Type", value: "Hydraulic Power Steering Rack" },
+        { label: "Steering Type", value: "Hydraulic Power Steering Ball Joint" },
         { label: "Housing Material", value: "Die-cast Aluminum Alloy" },
         { label: "Warranty", value: "1 Year B2B Sourcing" }
       ]

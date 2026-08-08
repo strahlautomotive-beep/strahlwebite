@@ -108,7 +108,7 @@ export default function QualityPage() {
 
       {/* ── MATERIAL VERIFICATION METHODS ── */}
       <div style={{ marginBottom: "60px" }}>
-        <h2 style={{ fontSize: "28px", color: "var(--text-light)", marginBottom: "16px", fontFamily: "var(--fd)", fontWeight: "700" }}>Material Verification</h2>
+        <h2 style={{ fontSize: "28px", color: "var(--text-light)", marginBottom: "16px", fontFamily: "var(--fd)", fontWeight: "700" }}>Quality Control & Testing</h2>
         <p style={{ color: "#000000", fontSize: "15.5px", maxWidth: "650px", marginBottom: "30px", fontWeight: "400" }}>
           Before batch orders are dispatched to our distribution partners, components are evaluated across key verification methods to ensure strict adherence to quality specifications.
         </p>
