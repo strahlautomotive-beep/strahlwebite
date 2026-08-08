@@ -8,14 +8,15 @@ export default function Footer() {
         {/* COLUMN 1: BRAND SUMMARY & FOLLOW STRAHL */}
         <div className="footer-col" style={{ gap: "10px" }}>
           <div className="footer-logo">
-            <div style={{ marginBottom: "16px", display: "inline-flex" }}>
+            <div style={{ marginBottom: "16px", display: "inline-flex", alignItems: "flex-start" }}>
               <Image
                 src="/images/footer white.png"
                 alt="STRAHL Logo"
-                width={150}
-                height={150}
-                style={{ height: "auto", width: "130px", objectFit: "contain" }}
+                width={100}
+                height={100}
+                style={{ height: "auto", width: "85px", objectFit: "contain" }}
               />
+              <span style={{ fontSize: "14px", fontWeight: "700", marginLeft: "4px", marginTop: "4px", color: "rgba(255, 255, 255, 0.7)" }}>™</span>
             </div>
           </div>
 
