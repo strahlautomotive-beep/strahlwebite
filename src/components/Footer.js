@@ -14,7 +14,7 @@ export default function Footer() {
                 alt="STRAHL Logo"
                 width={100}
                 height={100}
-                style={{ height: "auto", width: "85px", objectFit: "contain" }}
+                style={{ height: "auto", width: "85px", objectFit: "contain", mixBlendMode: "lighten" }}
               />
               <span style={{ fontSize: "14px", fontWeight: "700", marginLeft: "4px", marginTop: "4px", color: "rgba(255, 255, 255, 0.7)" }}>™</span>
             </div>
