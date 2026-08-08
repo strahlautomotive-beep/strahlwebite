@@ -12,9 +12,9 @@ export default function Footer() {
               <Image
                 src="/images/footer white.png"
                 alt="STRAHL Logo"
-                width={100}
-                height={100}
-                style={{ height: "auto", width: "85px", objectFit: "contain" }}
+                width={150}
+                height={150}
+                style={{ height: "auto", width: "130px", objectFit: "contain" }}
               />
             </div>
           </div>
@@ -25,7 +25,7 @@ export default function Footer() {
             </p>
             <div style={{ width: "28px", height: "2px", background: "#38BDF8", margin: "6px 0 10px 0" }} />
             <p style={{ fontSize: "12.5px", lineHeight: "1.6", color: "rgba(255, 255, 255, 0.65)", margin: 0 }}>
-              STRAHL™ represents a commitment to precision engineering, advanced technology, and uncompromising quality. Every solution is developed to meet the highest standards of performance, durability, and reliability.
+              STRAHL represents a commitment to precision engineering, advanced technology, and uncompromising quality. Every solution is developed to meet the highest standards of performance, durability, and reliability.
             </p>
           </div>
 
@@ -255,7 +255,7 @@ export default function Footer() {
           <span>Built on Precision. Driven by Innovation. Trusted Worldwide.</span>
         </div>
         <div>
-          <span>© 2026 STRAHL™. All rights reserved.</span>
+          <span>© 2026 STRAHL. All rights reserved.</span>
         </div>
       </div>
     </footer>
