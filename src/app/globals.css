@@ -2109,8 +2109,11 @@ footer {
 
 @media (max-width: 480px) {
   .footer-inner {
-    grid-template-columns: 1fr;
-    gap: 24px;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .footer-col {
+    grid-column: 1 / -1 !important;
   }
   .navbar-floating {
     padding: 0 1.2rem;
