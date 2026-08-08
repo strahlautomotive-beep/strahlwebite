@@ -29,7 +29,7 @@ export default function Navbar() {
             width={200}
             height={60}
             priority
-            style={{ height: "58px", width: "auto", objectFit: "contain" }}
+            style={{ height: "48px", width: "auto", objectFit: "contain" }}
           />
         </Link>
 

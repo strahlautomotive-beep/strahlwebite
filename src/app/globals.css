@@ -71,10 +71,10 @@ a {
   pointer-events: auto;
   width: 100%;
   max-width: 1200px;
-  height: 76px; /* Reduced height to have less top/bottom space */
+  height: 64px; /* Reduced height to have less top/bottom space */
   background: #FFFFFF; /* Totally solid white, no transparency */
   border: 1px solid rgba(15, 23, 42, 0.08); /* Premium crisp border */
-  border-radius: 38px;
+  border-radius: 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -97,8 +97,8 @@ a {
 }
 
 .nav-logo img {
-  height: 68px; /* Kept large, with less padding around it */
-  max-height: 72px;
+  height: 48px; /* Adjusted to fit the new navbar height */
+  max-height: 52px;
   width: auto;
   object-fit: contain;
 }
