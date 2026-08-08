@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="footer-logo">
             <div style={{ marginBottom: "16px", display: "inline-flex" }}>
               <Image
-                src="/images/footer-white.png"
+                src="/images/footer white.png"
                 alt="STRAHL Logo"
                 width={100}
                 height={100}
